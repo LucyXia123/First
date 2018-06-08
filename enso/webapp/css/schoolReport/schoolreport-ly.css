@@ -1,0 +1,376 @@
+/*褰曢煶鐣岄潰鏍峰紡*/
+a:hover{
+	text-decoration: none;
+	
+}
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+/*鏍囬*/
+.ly_title {
+    width: 90%;
+    height: 50px;
+    background-color: rgba(0,0,0,0.05);
+    margin: 10px auto;
+    line-height: 50px;
+
+}
+.ly_title span {
+    font-size: 1.5rem;
+    margin-right: -6px;
+    margin-left: 20px;
+}
+.mid_content {
+    width: 100%;
+   /*  height: 800px; */
+    /*background-color: pink;*/
+    margin: 0 auto;
+     position: relative;
+    
+}
+.mid_content dl {
+    height: 50px;
+    width: auto;
+    text-align: center;
+    padding-top: 20px;
+    
+
+}
+.mid_content dl dt {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+.mid_content dl dd {
+    /*float: left;*/
+      display: inline;
+      margin : 0 0 0 30px;
+      font-size: 1.5rem;
+
+}
+.mid_content .fm-image {
+    width: 20%;
+    height: 200px;
+    padding: 20px 0 0 110px;
+    float: left;
+
+}
+.mid_content .fm-image img {
+    border: 1px solid grey;
+}
+.mid_content .digest {
+    width: 70%;
+    height: 200px;
+    float:left;
+    /* border: 1px solid grey; */
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 1.5rem ;
+    margin-left:100px;
+
+}
+.fm-des {
+    height: 200px;
+    margin-bottom: 30px ;
+    width:1000px;
+}
+/*闊抽鎾斁鏍峰紡寮�濮�*/
+.player {
+    width: 800px;
+    height: 30px;
+    margin: 0 245px;
+    /*border-radius: 4px;*/
+    background: #000;
+    position: relative;
+    line-height:30px;
+}
+video {
+    display: none;
+    height: 100%;
+    margin: 0 auto;
+}
+/*鍏ㄥ睆鎿嶄綔鍚�  鑷甫鐨勬帶鍒舵爮浼氭樉绀�  鍦ㄦ樉绀虹殑鏃跺�欓殣钘�*/
+video::-webkit-media-controls {
+    display: none !important;
+}
+.controls {
+    width: 900px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    margin-left: -376px;
+    /*bottom: 5px;*/
+    /*姣斿叏灞忕殑鐘舵�佷笅鐨勮棰戝厓绱犻珮*/
+    z-index: 100000000000;
+    opacity: 1;
+}
+.player:hover .controls {
+    opacity: 1;
+}
+/*鎾斁/鏆傚仠*/
+.controls .switch {
+    display: block;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    color: #FFF;
+    position: absolute;
+    top: 4px;
+    left: 11px;
+}
+/*鍏ㄥ睆鎸夐挳*/
+.controls .expand {
+    display: block;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    color: #FFF;
+    position: absolute;
+    right: 255px;
+    top:5px;
+}
+/*杩涘害鏉�*/
+.progress {
+    width: 400px;
+    height: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #555;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 45px;
+}
+/*涓嬭浇杩涘害*/
+.progress .loaded {
+    width: 0;
+    height: 100%;
+    background-color: #999;
+}
+/*鎾斁杩涘害*/
+.progress .line {
+    width: 0;
+    height: 100%;
+    background-color: #FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.progress .bar {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+/*鏃堕棿*/
+.timer {
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    left: 462px;
+    top: 5px;
+    color: #FFF;
+    font-size: 14px;
+}
+.yl_progress {
+    position: absolute;
+    right: 232px;
+    top: 5px;
+
+}
+.yl_progress .yl_bar {
+    width: 100px;
+    height: 10px;
+    opacity: 0.3;
+    position: absolute;
+    left: -11px;
+    top: 5px;
+    z-index: 1;
+    background-color: white;
+    z-index: 444;
+    border-radius: 3px;
+
+}
+/*闊抽鎾斁鏍峰紡缁撴潫*/
+/*左点赞 收藏区*/
+.ly_function {
+    /*  margin: 27px auto; */
+     width: 967px;
+     height: 80px;
+     display: block;
+     /*background-color: #2e6da4;*/
+     position: relative;
+     font-size: 2rem;
+     line-height: 80px;
+ }
+.ly_dz img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    float: left;
+    margin-left: 72px;
+    margin-top: 32px;
+
+}
+.ly_dz > #dzs {
+    float: left;
+    display:block;
+    margin-left: 20px;
+    font-size: 2rem;
+    height:40px;
+    margin-top: 15px;
+    
+}
+.ly_sc  {
+   position: absolute; 
+    
+    top:46px;
+    right: -85px; 
+    display: block;
+    width:200px;
+    height:40px;
+  /*   background-color: pink; */
+    line-hight:40px;
+    
+}
+.ly_sc #ly_image  {
+    border-width: 0px;
+    position: absolute;
+    left: 13px;
+    top: -12px;
+    width: 40px;
+    height: 40px;
+     font-size: 2rem;
+    
+    
+}
+.ly_sc>span{
+	border-width: 0px;
+    position: absolute;
+    left: 66px;
+    top: -30px;
+    
+	
+}
+.wx_image {
+    border-width: 0px;
+    position: absolute;
+    right: -92px;
+    top: 28px;
+    width: 50px;
+    height: 50px;
+}
+/*评论数*/
+#ly_pls >p >span{
+    border-width: 0px;
+    position: absolute;
+    left: 145px;
+    top: 70px;
+    width: 113px;
+    white-space: nowrap;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #5e5e5e;
+}
+.input-group  {
+    border-width: 0px;
+    position: absolute;
+    left:145px;
+    top: 510px;
+    width: 900px;
+    height: 80px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #8D8D8D;
+    text-align: left;
+    /*background-color: #00a4ff;*/
+}
+.input-group .form-control {
+    height: 60px;
+}
+.input-group >span >button {
+    height: 60px;
+    margin-top: -20px;
+}
+/*评论区*/
+#tw_plq {
+    width: 900px;
+    height: 641px;
+    border: 1px solid grey;
+    margin: 135px auto;
+
+}
+.tw_plq_inner .tw_plq_record #more_answer {
+	position: absolute;
+    left: 80px;
+    top:115px;
+    font-size: 1.5rem;
+    height:30px;
+    
+}
+.tw_plq_inner .tw_plq_record #more_answer  a {
+	color:blue;
+}
+#tw_plq  .tw_plq_inner {
+    width: 800px;
+    height: 639px;
+    /*border: 1px solid grey;*/
+    margin: 0 auto;
+    position: relative;
+
+}
+.tw_plq_record {
+    width: 100%;
+    height: 140px;
+    border-bottom: 1px solid grey ;
+    border-bottom-height: 800px;
+    position: relative;
+}
+#tw_plq .img {
+    position: absolute;
+    left: 0px;
+    top: 22px;
+    width: 50px;
+    height: 50px;
+}
+#tw_plq .tw_plq_record span {
+    position: absolute;
+    left: 80px;
+    top: 35px;
+    font-size: 2rem;
+}
+#tw_plq .tw_plq_record p>span {
+    position: absolute;
+    left:170px;
+    top: 35px;
+    font-size: 2rem;
+
+}
+ .tw_plq_record #tw_write {
+    position: absolute;
+    left:80px;
+    top: 80px;
+    font-size: 1.5rem;
+
+}
+#tw_plq  .tw_plq_inner .tw_dot {
+    display: block;
+    position: absolute;
+    bottom: 40px;
+    left: 43%;
+    font-size: 3rem;
+}
+#tw_loadMore {
+    position: absolute;
+    bottom: 15px;
+    left: 40%;
+    font-size: 2rem;
+    color:blue;
+
+}

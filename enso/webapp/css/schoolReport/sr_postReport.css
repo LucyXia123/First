@@ -1,0 +1,148 @@
+
+.tw_top {
+    width: 90%;
+    height: 50px;
+    background-color: rgba(0,0,0,0.05);
+    margin: 10px auto;
+    line-height: 50px;
+}
+.tw_top span {
+    font-size: 1.5rem;
+    margin-right: -6px;
+    margin-left: 20px;
+    
+}
+.now {
+    color: blue;
+}
+#ask_form {
+
+    margin: 35px auto;
+
+    /*margin: 20px 0 0 40px;*/
+    width:80%;
+
+    height: 1200px;
+    position:relative;
+
+}
+.item_content label {
+    width: 100px;
+    height: 30px;
+    text-align: right;
+    line-height:30px ;
+    font-size: 2rem;
+    z-index: 111;
+    float: left;
+    display: block;
+
+
+}
+.item_content{
+    border-width: 0px;
+    width: 800px;
+    height:70px;
+    margin: 20px auto;
+     line-height: 45px; 
+}
+
+.item_content select , .item input {
+    float: left;
+    width: 369px;
+    height: 30px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #000000;
+}
+/*鏂囦欢閫夋嫨*/
+.fmPicture {
+  width: 50px;
+    height: 100px;
+}
+#item_fmPicture input {
+    width: 60px;
+    height: 30px;
+    background-color: #00a1d6;
+
+}
+option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+
+input[type="radio"]{
+    display: none;
+}
+input[type='radio']+label:before{
+    margin-top: -2px;
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    border-radius: 100%;
+    vertical-align: middle;
+    border: 1px solid #E4E4E4;
+    background: #FFFFFF;
+}
+
+input[type='radio']:checked+label:before{
+    background-color:orange;
+    /*background: #777777;*/
+}
+#item_standard_input {
+    width:288px;
+    height: 30px;
+
+
+}
+#item_standard span {
+    width: 50px;
+    display: inline-block;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+/*鎻愪氦鎸夐挳寮�濮�*/
+#upLoadImages ,#prelook,#public{
+    width: 80px;
+    height: 30px;
+    color: #fff;
+    font-size: 16px;
+    /*margin-bottom: 50px;
+    margin-left: 215px;*/
+    border: none;
+    background-color:cornflowerblue;
+    margin-top: 80px;
+    border-radius: 5px;
+    line-height: 30px;
+}
+#up_img {
+    margin: 0px 20px;
+
+}
+#item_digest {
+	height:150px;
+   
+	
+}
+#prelook {
+  
+    position: absolute;
+    bottom:216px;
+    left: 510px;
+}
+#public {
+  
+    position: absolute;
+    bottom:216px;
+    left: 815px;
+    background-color:orange;
+}
+
+/*闂瓟鏍峰紡缁撴潫*/

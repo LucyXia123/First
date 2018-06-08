@@ -1,0 +1,46 @@
+.more-wrapper {
+    margin: 30px auto 30px;
+    width: 1140px;
+    background: #fff;
+}
+
+.school-item {
+  border-bottom: 1px solid #ccc;
+  width: 1000px;
+}
+
+.school-item .item-text {
+    float: left;
+    width: 700px;
+    height: 260px;
+    margin-left: 0;
+    position: relative;
+}
+
+.school-item .item-preview {    
+    margin-top: 20px;
+    margin-right: 10px;
+    zoom: 1;
+}
+
+.school-item .item-preview .poster {
+    width: 290px;
+    height: 210px;
+}
+
+.school-item .item-text .item-content {
+    font-size: 16px;
+    text-indent: 0;  
+}
+
+.school-item .item-text .item-date {
+   padding-top: 20px;
+   font-size: 16px;
+}
+
+.poster {
+    width: 290px;
+    height: 200px;
+    zoom: 1;
+    float: left;
+}

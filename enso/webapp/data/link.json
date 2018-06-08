@@ -1,0 +1,12 @@
+{"list": [
+    {"url":"http://www.hntv.tv", "name":"河南电视台"},
+	{"url":"http://henan.163.com/", "name": "网易河南"},
+	{"url":"http://henan.people.com.cn/", "name": "人民网河南频道"},
+	{"url":"http://news.hbtv.com.cn/", "name": "湖北网络电视台"},
+	{"url":"http://www.shangdu.com/", "name": "商都网"},
+	{"url":"http://henan.qq.com/", "name": "腾讯大豫网"},
+	{"url":"http://www.sarftkjw.cn/nwc/enterportal/index.jsp", "name": "全国互联网与音视频广播研讨会"},
+	{"url":"http://www.hnr.cn/", "name": "映象网"},
+	{"url":"http://www.zynews.cn/", "name": "中原网"}	
+  ]
+}

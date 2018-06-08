@@ -1,0 +1,941 @@
+@charset "utf-8";
+
+.content-wrapper {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 1206px;
+}
+
+.module {
+  font-size: 14px;
+  line-height: 20px;
+  clear: both;
+  margin-top: 20px;
+}
+
+.module:after {
+  content: " ";
+  clear: both;
+  display: block;
+}
+
+.module-header {
+  position: relative;
+}
+
+.module-header > a.pull-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.module h2 {
+  text-align: left;
+  font-size: 24px;
+  line-height: 30px;
+  color: #333;
+  margin: 20px 0;
+}
+
+.content-wrapper > .tv {
+  margin-top: 30px;
+}
+
+.module > ul.card-list > li {
+    float: left;
+    margin-right: 38px;
+    position: relative;
+}
+
+.module > ul.card-list > li.last-item {
+    margin-right: 0;
+}
+
+.module > ul.card-list > li > a {
+  z-index: 2;
+  transition: all 1s ease;
+}
+
+.module > ul.card-list > li .img {
+  width: 210px;
+  height: 130px;
+  background-repeat: no-repeat;
+}
+
+.tv > ul.card-list {
+   margin-top: 20px;
+}
+
+.cover {
+  background-color: #333;
+  opacity: .3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.seq {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    font-size: 22px;
+    margin-left: -1.5em;
+    margin-top: -.5em;
+    color: #fff;
+    display: block;
+    opacity: 1;
+    z-index: 1;
+}
+
+.module > ul.card-list > li > a > .cover {
+  width: 210px;
+  height: 130px;
+}
+
+.school-pic {
+  float: left;
+}
+
+.school-pic a {
+  display: inline-block;
+  float: left;
+  position: relative;
+  margin-left: 20px;
+}
+
+.school-pic > a > img, .school-pic > a > .cover {
+  width: 280px;
+  height: 240px;
+}
+
+.school-pic > a .seq {
+  margin-left: -2em; 
+}
+
+.module > ul.card-list > li > a > .seq {
+  margin-left: -1.5em;
+}
+
+.module > ul.card-list > li > a:hover > .cover, .school-pic > a:hover .cover {
+  opacity: 0;
+}
+
+.module-header > .badge {
+  font-size: 20px;
+  padding: 6px;
+  color: #ffffff;
+  border-radius: 0;
+  font-weight: 500;
+  display: inline-block;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.school .module-header .badge {
+  background-color: #34C963;
+}
+
+.school > .module-body {
+  height: 240px;
+  box-sizing: content-box;
+}
+
+.school > .module-body > .school-info {
+    height: inherit;
+    width: 600px;
+    float: left;
+    background-color: #fefefe;
+    color: #2b2b2b;
+    padding: 10px;
+}
+
+.school > .module-body > .school-info > .school-logo {
+  display: inline-block;  
+  width: 170px;
+  float: left;
+}
+
+.school > .module-body > .school-info > .school-logo img {
+  width: 150px;
+  height: 150px;
+  margin-top: 35px;
+}
+
+.school > .module-body > .school-info .school-content {
+  padding-top: 20px;
+  float: left;
+  width: 400px;
+}
+
+.school > .module-body > .school-info .school-content .school-title {  
+  font-size: 30px;     
+  padding: 10px 0;
+  display: inline-block;
+}
+
+.school > .module-body > .school-info .school-content .school-intro {
+  float: right;
+  width: 400px;
+  padding: 10px 0;
+}
+
+.module .order-by {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 16px;
+}
+
+.module .order-by .active {
+  color: #74be04;
+}
+
+.module-body {
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* 院校采风, 学生采风 */
+.module2 {width: 100%; height: 600px;}
+.module3:after {clear: both;}
+
+.xycf, .xscf, .jsfc {
+  width: 50%;
+  display: inline-block;
+}
+
+.jsfc {
+  float: left;
+  height: 820px;
+  width: 600px;
+}
+
+.xscf {float: right; padding-left: 16px;}
+
+.xycf .module-header .badge {background-color: #45C0E2;}
+.xscf .module-header .badge {background-color: #F0EB5C;}
+.jsfc .module-header .badge {background-color: #E4B75A;}
+
+.xycf .card-list, .xscf .card-list, .xscf .card-list, .xscf .card-list {
+  width: 603px;
+  height: 500px;
+  float: left;
+}
+
+.xycf .card-list .card-item, .xscf .card-list .card-item, .jsfc .card-list .card-item {
+  position: relative;
+  width: 280px;
+  height: 250px;
+  float: left;
+  display: block;
+  margin-right: 20px;
+}
+
+.xycf .card-list .card-item.odd, .xscf .card-list .card-item.odd, .jsfc .card-list .card-item.odd {
+  margin-right: 20px;
+}
+
+.xycf .card-list .card-item span, .xscf .card-list .card-item span, .jsfc .card-list .card-item span {
+    position: absolute;
+    top: 180px;
+    left: 0;
+    height: 50px;
+    line-height: 50px;
+    width: 280px;
+    background-color: #ccc;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    font-family: sans-serif;
+}
+
+.xycf .card-list .card-item img, .xscf .card-list .card-item img, .jsfc .card-list .card-item img {
+    width: 280px;
+    height: 180px;
+}
+
+/* .hdcf, .msyk {width: 50%;} */
+
+.hdcf .badge {
+  background-color: #01A039;
+}
+
+.msyk .badge {
+  background-color: #E6B75D;
+}
+
+.module3 {
+  position: relative;
+  clear: both;
+  height: 1100px;  
+}
+
+.module3:after {clear:both;}
+
+.module3 > .hdcf {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.module3 > .msyk {
+  position: absolute;  
+  top: 530px;
+  right: 0;
+}
+
+.article-item {
+  width: 600px;
+  height: 100px;
+  margin-bottom: 16px;  
+}
+
+.article-img {float: left;}
+.article-img > img {width: 120px; height: 100px;}
+
+.article-body {
+  float: left;
+  padding: 0 10px 0;
+  width: 480px;     
+  box-sizing: border-box;
+}
+
+.article-title {
+    font-size: 18px;
+    color: #333;
+    padding: 10px 0;
+}
+
+.article-item .article-title {
+    padding: 0;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;  
+    width: 470px;
+}
+
+.article-item .article-body .article-content {
+    height: 3em;
+    overflow: hidden;
+}
+
+/* .article-content {padding-top: 10px;} */
+
+.article-metas {
+  color: #31A64B;
+  float: right;
+}
+
+.msyk .article-metas {
+  color: #E7BC6E;
+}
+
+/* before 2017.12.04 */
+
+.module > .module-header > a.more {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 20px;
+}
+
+.module > .more {
+  margin: 30px auto;
+  display: block;
+  width: 4em;
+  font-size: 22px;
+}
+
+.learn .module-body>a, .school .module-body>a, .course .module-body>a, .students .module-body>a {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    height: 230px;
+    width: 260px;
+    overflow: hidden;
+    margin: 10px 12px 10px 0;
+    background: #fff;
+    transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    border-radius: 12px;
+}
+
+.school .module-body>a {
+  height: 210px;
+}
+
+.school .module-body .card .caption {
+  text-align: center;
+  padding: 1em;
+}
+
+.learn .card:nth-child(4n),
+.school .card:nth-child(4n),
+.course .card:nth-child(4n), 
+.students .card:nth-child(4n) {
+  margin-right: 0;
+}
+
+.card:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
+}
+
+.learn .card>img, .school .card>img, .course .card>img, .students .card>img {
+  width: 100%;
+  height: 150px;
+  outline: 0;
+  border: 0;
+}
+
+.learn .card> .img, .school .card>.img {
+  width: inherit;
+  height: 150px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-repeat: no-repeat;
+}
+
+.course .module-body>a {
+  height: 240px;
+  border: 1px solid #ccc;
+}
+
+.course .card:hover .caption {
+  color: #5bba3c;
+}
+
+.course .card .sch-tag, .students .card .sch-tag {
+    text-align: right;
+    margin-right: 1em;
+    font-size: 14px;
+}
+
+.course .card:hover .sch-tag, .students .card .sch-tag {
+  color: #666;
+}
+
+.course .module-body .card .caption {
+  height: 2em;
+  overflow: hidden;
+}
+
+.card img {
+  transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+}
+
+.learn .caption span {
+  color: #888;
+  font-family: arial, 'microsoft yahei ui', 'microsoft yahei', simsun,
+    sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+
+.cap-lg {
+  font-size: 24px;
+  line-height: 30px;
+  color: #888;  
+  padding: 24px 0;
+  font-weight: 500;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  display: inline-block;
+  text-align: center;
+  font-family: sans-serif, "microsoft yahei";
+}
+
+/* 我的示范校 */
+.school-item {
+    width: 800px;
+    height: 260px;
+    margin: 20px auto;
+}
+
+.school-item .item-preview {
+    position: relative;   
+    float: left;
+    /* background-color: #362d30; */
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    zoom: .8;
+}
+
+.school-item .item-preview .poster {
+  width: 360px;
+  height: 260px;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  z-index: 2;  
+}
+
+.school-item .item-preview .play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    margin-top: -30px;
+    border-radius: 20px;
+    background-color: #fff;
+    z-index: 3;
+    opacity: .8;
+}
+
+.school-item .item-preview .play:hover {
+    opacity: 1;
+}
+
+.play-arrow {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 18px solid #333;
+    border-bottom: 10px solid transparent;
+}
+
+.school-item .item-preview .play .play-arrow {
+    position: absolute;
+    left: 22px;
+    top: 20px;
+    z-index: 4;
+}
+
+.school-item .item-text {
+    float: left;
+    width: 500px;
+    height: 210px;
+    position: relative;
+}
+
+.school-item .item-text .item-title {
+    color: #595959;
+    font-size: 20px;
+    padding: 20px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;    
+}
+
+.school-item .item-text .item-title > a {
+  margin-left: 1em;
+}
+
+.school-item .item-text .item-content {
+    font-size: 16px;
+    text-indent: 2em;
+    line-height: 1.8;
+    width: 100%;
+    max-height: 200px;
+    height: auto;
+    word-break: break-all;
+    overflow: hidden;
+    float: left;
+    padding-left: 10px;
+}
+
+.school-item .item-text .item-date {
+    position: absolute;
+    bottom: 0;    
+    right: 0;
+    font-size: 18px;
+    color: #555;
+    font-weight: 500;
+}
+
+.school-item .item-text:after {
+    clear: both;
+}
+
+/* 校长寄语 */
+.principal, .teachers, .students {
+  width: 1100px;
+  margin: 30px auto;
+  height: 200px;
+}
+
+.module-label {
+  width: 130px;
+  height: 200px;
+  float: left;
+  margin-right: 20px;
+  position: relative;
+}
+
+.module-label > span {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  width: 1em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -.5em;
+  margin-top: -2.4em;
+  line-height: 1.2em;
+}
+
+.principal .principal-block {
+  width: 950px;
+  height: inherit;
+  float: left;
+  background-color: #252525;
+  color: #eee;
+  position: relative;
+}
+
+.principal .principal-block .avatar {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.principal .principal-block .words {
+    width: 750px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2em 1em;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";
+    line-height: 2;
+}
+
+.principal .principal-block .words > p {
+  text-indent: 2em;
+}
+
+/* 教师风采 */
+.module-block {
+    width: 950px;
+    height: inherit;
+    float: left;   
+}
+
+.teachers .module-block .card, .students .module-block .card {
+  position: relative;
+  display: inline-block;
+}
+
+.teachers .module-block .card.first, .students .module-block .card.first {
+  width: 320px;
+  height: 200px;
+}
+
+.teachers .module-block .card.first > .teacher-avatar, .teachers .module-block .card.first > .teacher-metas,
+.students .module-block .card.first > .student-avatar, .students .module-block .card.first > .student-metas {
+    width: 160px;
+    height: inherit;
+    display: inline-block;
+    outline: none;
+    border: 0;
+}
+
+.teachers .module-block .card.first > .teacher-avatar, .students .module-block .card.first > .student-avatar {
+   position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.teachers .module-block .card.first > .teacher-metas,
+.students .module-block .card.first > .student-metas {
+  position: absolute;
+    right: 0;
+    top: 0;
+    color: #fefefe;
+    line-height: 1.2em;
+    background-color: #4FCEFE;
+    padding: 24px 10px;
+    box-sizing: border-box;
+}
+
+.card.first .teacher-metas .teacher-name,
+.card.first .student-metas .student-name {
+  font-size: 24px;
+  text-align: center;
+}
+
+.card.first .teacher-metas .teacher-school,
+.card.first .student-metas .student-school {
+  font-size: 20px;
+  text-align: center;
+  padding: 1em;
+  line-height: 1em;
+}
+
+.card.first .teacher-metas .teacher-intro,
+.card.first .student-metas .student-intro {
+    font-size: 16px;
+    line-height: 1.5em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.module-block .cards-sm {    
+    width: 570px;
+    height: 170px;
+    float: right;
+    /* background: aliceblue; */
+    zoom: 1.1;
+}
+
+.module-block .cards-sm .card {
+  width: 170px;
+  height: 184px;
+    float: left;
+    margin-left: 16px;
+}
+
+.module-block .cards-sm .card .card-top {
+  position: relative;
+  background-color: #4FCEFE;
+}
+
+.module-block .cards-sm .card .card-top > .avatar-sm {  
+  width: 110px;
+  height: 130px;
+}
+
+.module-block .cards-sm .card .card-top > .teacher-name, .module-block .cards-sm .card .card-top > .student-name {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1em;
+}
+
+.module-block .cards-sm .card .card-top > .teacher-name > span, .module-block .cards-sm .card .card-top > .student-name > span {
+    font-size: 20px;
+    right: 1em;
+    top: 1em;
+    color: #fefefe;
+    display: inline-block;
+    position: absolute;
+}
+
+.module-block .cards-sm .card .card-bottom {
+    /* background: aquamarine; */
+    height: 4em;
+    line-height: 2em;
+}
+
+.module-block .cards-sm .card .card-bottom > p {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center; 
+}
+
+.module-block .cards-sm .card .card-bottom > span {
+  float: right;
+  padding-right: .5em;
+}
+
+/* 学生展示 */
+.wrapper-reverse {
+  background: #343434;
+  color: #fefefe;
+}
+
+.inform-wrapper {  
+  margin-bottom: -50px;
+}
+
+.module.inform, .module.news {
+  background: #343434;
+  padding-top: 50px;
+  margin-bottom: 0;
+}
+
+.wrapper-reverse .module-header h2, .wrapper-reverse .module-header > a {
+  color: #fefefe;
+}
+
+.inform .module-body, .news .module-body {
+    padding: 30px 60px 60px 60px;
+}
+
+.inform .module-body .inform-item, .news .module-body .inform-item  {
+  display: block;
+  color: #fefefe;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.inform .module-body .inform-item .title, .news .module-body .inform-item .title {
+  padding-left: 2em;
+  padding-right: .5em;
+}
+
+.banner {
+  margin: 50px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 800px;
+  height: 100px;
+  position: relative;
+  display: block;
+}
+
+.banner > span {
+  color: #fff;
+  font-family: "宋体";
+  font-size: 36px;
+  height: 36px;
+  line-height: 36px;
+  position: absolute;
+  top: 37px;
+  left: 450px;
+}
+
+.intro {
+  width: 810px;
+  margin-top: 20px;
+}
+
+.intro > .module-header {
+  position: relative;
+  width: 100%;
+  height: 132px;
+}
+
+@font-face {
+	font-family: hanyixuejun;
+	src: url('../fonts/hanyixuejun.ttf');
+}
+
+.school-logo .words {
+    float: left;
+    margin-top: 14px;
+    margin-left: 10px;
+}
+
+#self > hr {
+    border-top: 1px solid #ccc;
+    width: 100%;
+    margin-top: 40px  
+}
+
+.school-logo .words .myfont, .school-logo .words .pinyin {
+    width: 350px;
+    text-align: center;
+}
+
+/* 学校名称超出不换行  */
+.school-logo .words .myfont {
+  font-family: hanyixuejun;
+  font-size: 50px;
+  font-weight: 500;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+.school-logo .words .pinyin {
+  font-size: 20px;
+}
+
+.intro > .module-body .content {
+    font-size: 15px;
+    line-height: 2em;
+    color: #525252;    
+    width: 100%;
+    margin: 0 auto;
+    float: left;
+}
+
+#intro-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+#read-more {
+  padding: 5px;
+  border-top: 4px double #ddd;
+  color: #333;
+  text-align: center;
+}
+
+#read-more a {
+    padding-right: 22px;
+    /* background: #f5f5f5 no-repeat 100% 50%; */
+    font-weight: bold;
+    text-decoration: none;
+    color: #0087f1;
+}
+
+.intro > .module-body > ul > .img-item {
+    width: 350px;
+    height: 200px;
+    float: left;
+    margin: 20px 20px 20px 0;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+}
+
+.intro > .module-body > ul > .img-item.last, .intro > .module-body > ul > .img-item:last-child {
+   margin-right: 0;
+}
+.recommend-label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #74aa55;
+    border: 1px solid #8cae53;
+    border-radius: 6px;
+    padding: 2px 4px;
+    margin: 8px;
+    font-size: 14px;
+}
+
+.recommend-by {
+  color: #888;
+  position: absolute; 
+  right: 0;
+  bottom: 0;
+  margin: 8px;
+}
+
+.sns {
+    display: inline-block;
+    position: absolute;
+    left: 50px;
+    bottom: 8px;
+    font-size: 20px;
+}
+
+.sns img {
+  width: 20px; 
+  height: 20px;
+  margin-bottom: 3px;
+}
+
+.sns .num {  
+  font-size: 18px;
+  color: #666;
+}
+
+p {
+  text-indent: 2em;
+}
+
+ 

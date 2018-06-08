@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="165f566d-bf57-4d97-870a-5f9203636fd0" name="tomcat" url="http://localhost/ENSO-0.0.1-SNAPSHOT">
+        <fileTransfer port="0" mountedRoot="D:\soft\apache-tomcat\webapps\ENSO-0.0.1-SNAPSHOT" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

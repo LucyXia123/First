@@ -1,0 +1,1 @@
+mysqldump -uroot -hlocalhost --database studyonline -pLX2017enso 1> studyonline.sql

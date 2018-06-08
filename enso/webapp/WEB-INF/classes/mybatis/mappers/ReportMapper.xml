@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsinghuadtv.www.mapper.ReportMapper">
+
+	<resultMap id="studentResult" 
+		extends="com.tsinghuadtv.www.mapper.StudentMapper.studentResult" type="Student"/>
+	
+	<resultMap id="reportResult" type="Report">
+		<id property="id" column="report_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="title" column="report_title" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="coverImage" column="report_cover_image" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="content" column="report_content" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="contentImage" column="report_content_image" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="abstractInfo" column="report_abstract" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="audioUrl" column="report_audio_url" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="videoUrl" column="report_video_url" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="createTime" column="report_create_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+		<result property="approveTime" column="report_approve_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+		<result property="deleteTime" column="report_delete_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+		<result property="deleted" column="report_is_deleted" jdbcType="CHAR" javaType="Bool"/>
+		<result property="viewCount" column="report_view_count" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="commentCount" column="report_comment_count" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="likeCount" column="report_like_count" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="userNumber" column="report_user_number" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="type" column="report_type_id" javaType="ReportType" typeHandler="EnumIdTypeHandler"/>
+		<result property="status" column="report_status_id" javaType="ReportStatus" typeHandler="EnumIdTypeHandler"/>
+		<result property="topicId" column="report_topic_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="taskId" column="report_task_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		
+		<association property="student" javaType="Student" resultMap="studentResult"/>
+	</resultMap>
+	
+	<resultMap id="reportCommentResult" type="ReportComment">
+		<id property="id" column="report_comment_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="content" column="report_comment_content" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="createTime" column="report_comment_create_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+		<result property="deleted" column="report_comment_is_deleted" jdbcType="CHAR" javaType="Bool"/>
+		<result property="userNumber" column="report_comment_user_number" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="reportId" column="report_comment_report_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		
+		<association property="student" javaType="Student" resultMap="studentResult"/>
+	</resultMap>
+	
+	<resultMap id="reportViewResult" type="ReportView">
+		<id property="id" column="report_view_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="updateTime" column="report_view_update_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+		<result property="userNumber" column="report_view_user_number" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="reportId" column="report_view_report_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+	</resultMap>
+	
+	<resultMap id="reportLikeResult" type="ReportLike">
+		<id property="id" column="report_like_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="createTime" column="report_like_create_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+		<result property="userNumber" column="report_like_user_number" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="reportId" column="report_like_report_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+	</resultMap>
+	
+	<resultMap id="userFavoriteReportResult" type="UserFavoriteReport">
+		<id property="id" column="user_favorite_report_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="createTime" column="user_favorite_report_create_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+		<result property="userNumber" column="user_favorite_report_user_number" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="reportId" column="user_favorite_report_report_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+	</resultMap>
+	
+	<resultMap id="reportTopicResult" type="ReportTopic">
+		<id property="id" column="report_topic_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="name" column="report_topic_name" jdbcType="VARCHAR" javaType="java.lang.String"/>
+	</resultMap>
+	
+	<sql id="pagingLimit">
+		<include refid="com.tsinghuadtv.www.mapper.CommonMapper.pagingLimit" />
+	</sql>
+	
+	<sql id="studentColumns">
+		<include refid="com.tsinghuadtv.www.mapper.StudentMapper.studentColumns" />
+	</sql>
+	
+	<sql id="reportColumns">
+		tr.id AS report_id,
+		tr.title AS report_title,
+		tr.cover_image AS report_cover_image,
+		tr.content AS report_content,
+		tr.content_image AS report_content_image,
+		tr.abstract AS report_abstract,
+		tr.audio_url AS report_audio_url,
+		tr.video_url AS report_video_url,
+		tr.create_time AS report_create_time,
+		tr.approve_time AS report_approve_time,
+		tr.delete_time AS report_delete_time,
+		tr.is_deleted AS report_is_deleted,
+		tr.view_count AS report_view_count,
+		tr.comment_count AS report_comment_count,
+		tr.like_count AS report_like_count,
+		tr.user_number AS report_user_number,
+		tr.type_id AS report_type_id,
+		tr.status_id AS report_status_id,
+		tr.topic_id AS report_topic_id,
+		tr.task_id AS report_task_id
+	</sql>
+	
+	<sql id="reportCommentColumns">
+		trc.id AS report_comment_id,
+		trc.content AS report_comment_content,
+		trc.create_time AS report_comment_create_time,
+		trc.is_deleted AS report_comment_is_deleted,
+		trc.user_number AS report_comment_user_number,
+		trc.report_id AS report_comment_report_id	
+	</sql>
+	
+	<sql id="reportViewColumns">
+		trv.id AS report_view_id,
+		trv.update_time AS report_view_update_time,
+		trv.user_number AS report_view_user_number,
+		trv.report_id AS report_view_report_id	
+	</sql>
+	
+	<sql id="reportLikeColumns">
+		trl.id AS report_like_id,
+		trl.create_time AS report_like_create_time,
+		trl.user_number AS report_like_user_number,
+		trl.report_id AS report_like_report_id	
+	</sql>
+	
+	<sql id="userFavoriteReportColumns">
+		ufr.id AS user_favorite_report_id,
+		ufr.create_time AS user_favorite_report_create_time,
+		ufr.user_number AS user_favorite_report_user_number,
+		ufr.report_id AS user_favorite_report_report_id	
+	</sql>
+	
+	<sql id="reportTopicColumns">
+		trt.id AS report_topic_id,
+		trt.name AS report_topic_name
+	</sql>
+	
+	<insert id="insertReport" parameterType="Report">
+		INSERT INTO t_report (
+			`id`,
+			`title`,
+		  	`cover_image`,
+		  	`content`,
+		  	`content_image`,
+		 	`abstract`,
+		  	`audio_url`,
+		  	`video_url`,
+		  	`create_time`,
+		  	`approve_time`,
+		  	`delete_time`,
+		  	`is_deleted`,
+		  	`view_count`,
+		  	`comment_count`,
+		  	`like_count`,
+		  	`user_number`,
+		  	`type_id`,
+		  	`status_id`,
+		  	`topic_id`,
+		  	`task_id`
+		) VALUES (
+			#{id},
+			#{title},
+			#{coverImage},
+			#{content},
+			#{contentImage},
+			#{abstractInfo},
+			#{audioUrl},
+			#{videoUrl},
+			NOW(),
+			NULL,
+			NULL,
+			'N',
+			0,
+			0,
+			0,
+			#{userNumber},
+			#{type.id},
+			#{status.id},
+			#{topicId},
+			#{taskId}			
+		)
+	</insert>
+	
+	<insert id="insertReportComment" parameterType="ReportComment">
+		INSERT INTO t_report_comment (
+			`id`,
+			`content`,
+		  	`create_time`,
+		  	`is_deleted`,
+		  	`user_number`,
+		  	`report_id`
+		) VALUES (
+			#{id},
+			#{content},
+			NOW(),
+			'N',
+			#{userNumber},
+			#{reportId}
+		)
+	</insert>
+	
+	<insert id="insertOrUpdateReportView" parameterType="ReportView">
+		INSERT INTO t_report_view (
+			`id`,
+			`update_time`,
+		  	`user_number`,
+		  	`report_id`
+		) VALUES (
+			#{id},
+			NOW(),
+			#{userNumber},
+			#{reportId}
+		) ON DUPLICATE KEY UPDATE
+			update_time = NOW()
+	</insert>
+	
+	<insert id="insertReportLike" parameterType="ReportLike">
+		INSERT INTO t_report_like (
+			`id`,
+			`create_time`,
+		  	`user_number`,
+		  	`report_id`
+		) VALUES (
+			#{id},
+			NOW(),
+			#{userNumber},
+			#{reportId}
+		)
+	</insert>
+	
+	<insert id="insertUserFavoriteReport" parameterType="UserFavoriteReport">
+		INSERT INTO t_user_favorite_report (
+			`id`,
+			`create_time`,
+		  	`user_number`,
+		  	`report_id`
+		) VALUES (
+			#{id},
+			NOW(),
+			#{userNumber},
+			#{reportId}
+		)
+	</insert>
+	
+	<update id="updateReport" parameterType="Report">
+		UPDATE 
+			t_report
+		<set>
+			<if test="title != null">
+				title = #{title},
+			</if>
+			<if test="coverImage != null">
+				cover_image = #{coverImage},
+			</if>
+			<if test="content != null">
+				content = #{content},
+			</if>
+			<if test="contentImage != null">
+				content_image = #{contentImage},
+			</if>
+			<if test="abstractInfo != null">
+				abstract = #{abstractInfo},
+			</if>
+			<if test="audioUrl != null">
+				audio_url = #{audioUrl},
+			</if>
+			<if test="videoUrl != null">
+				video_url = #{videoUrl},
+			</if>
+			<if test="approveTime != null">
+				approve_time = #{approveTime},
+			</if>
+			<if test="deleteTime != null">
+				delete_time = #{deleteTime},
+			</if>
+			<if test="deleted != null">
+				is_deleted = #{deleted.code},
+			</if>
+			<if test="status != null">
+				status_id = #{status.id},
+			</if>
+		</set>
+		WHERE
+			id = #{id}		
+	</update>
+	
+	<update id="increaseReportViewCount" parameterType="int">
+		UPDATE 
+			t_report
+		SET 
+			view_count = view_count + 1
+		WHERE
+			id = #{id}
+	</update>
+	
+	<update id="updateReportCommentCount" parameterType="int">
+		UPDATE 
+			t_report
+		SET 
+			comment_count = (SELECT COUNT(1) FROM t_report_comment WHERE report_id = #{id} AND is_deleted = 'N')
+		WHERE
+			id = #{id}
+	</update>
+	
+	<update id="updateReportLikeCount" parameterType="int">
+		UPDATE 
+			t_report
+		SET 
+			like_count = (SELECT COUNT(1) FROM t_report_like WHERE report_id = #{id})
+		WHERE
+			id = #{id}
+	</update>
+	
+	<update id="updateReportComment" parameterType="ReportComment">
+		UPDATE 
+			t_report_comment
+		<set>
+			<if test="content != null">
+				content = #{content},
+			</if>
+			<if test="deleted != null">
+				is_deleted = #{deleted.code},
+			</if>
+		</set>
+		WHERE
+			id = #{id}		
+	</update>
+	
+	<delete id="deleteReportLikeById" parameterType="int">
+		DELETE FROM t_report_like WHERE id = #{id}
+	</delete>
+	
+	<delete id="deleteUserFavoriteReportById" parameterType="int">
+		DELETE FROM t_user_favorite_report WHERE id = #{id}
+	</delete>
+	
+	<sql id="reportFilter" >
+		<if test="filter.id != null">
+			AND tr.id = #{filter.id}
+		</if>
+		<if test="filter.deleted != null">
+			AND tr.is_deleted = #{filter.deleted.code}
+		</if>
+		<if test="filter.userNumber != null">
+			AND tr.user_number = #{filter.userNumber}
+		</if>
+	</sql>
+	
+	<select id="selectReportByFilter" resultMap="reportResult">
+		SELECT
+			<include refid="reportColumns" />,
+			<include refid="studentColumns" />
+		FROM
+			t_report tr
+			INNER JOIN t_student stu ON stu.USERNUMBER = tr.user_number
+		<where>
+			<include refid="reportFilter" />
+		</where>
+		<include refid="pagingLimit" />
+	</select>
+	
+	<select id="countReportByFilter" resultType="int">
+		SELECT
+			COUNT(1)
+		FROM
+			t_report tr
+			INNER JOIN t_student stu ON stu.USERNUMBER = tr.user_number
+		<where>
+			<include refid="reportFilter" />
+		</where>
+	</select>
+	
+	<sql id="reportCommentFilter">
+		<if test="filter.reportId != null">
+			AND trc.report_id = #{filter.reportId}
+		</if>
+	</sql>
+	
+	<select id="selectReportCommentByFilter" resultMap="reportCommentResult">
+		SELECT
+			<include refid="reportCommentColumns" />,
+			<include refid="studentColumns" />
+		FROM
+			t_report_comment trc
+			INNER JOIN t_student stu ON stu.USERNUMBER = trc.user_number
+		<where>
+			<include refid="reportCommentFilter" />
+		</where>
+		ORDER BY 
+			trc.create_time DESC
+		<include refid="pagingLimit" />
+	</select>
+	
+	<select id="countReportCommentByFilter" resultType="int">
+		SELECT
+			COUNT(1)
+		FROM
+			t_report_comment trc
+			INNER JOIN t_student stu ON stu.USERNUMBER = trc.user_number
+		<where>
+			<include refid="reportCommentFilter" />
+		</where>
+	</select>
+	
+	<select id="selectReportLikeByUserAndReport" resultMap="reportLikeResult">
+		SELECT
+			<include refid="reportLikeColumns" />
+		FROM
+			t_report_like trl
+		WHERE
+			trl.user_number = #{userNumber} AND trl.report_id = #{reportId}
+	</select>
+	
+	<select id="selectUserFavoriteReportByUserAndReport" resultMap="userFavoriteReportResult">
+		SELECT
+			<include refid="userFavoriteReportColumns" />
+		FROM
+			t_user_favorite_report ufr
+		WHERE
+			ufr.user_number = #{userNumber} AND ufr.report_id = #{reportId}
+	</select>
+	
+	<select id="selectAllReportTopic" resultMap="reportTopicResult">
+		SELECT
+			<include refid="reportTopicColumns" />
+		FROM
+			t_report_topic trt
+	</select>
+
+</mapper>

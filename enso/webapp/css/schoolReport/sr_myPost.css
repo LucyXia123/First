@@ -1,0 +1,146 @@
+html {
+   font-size: 62.5%;
+    /*14px*/
+
+}
+a:hover,a:active,a:focus{
+    text-decoration: none;
+}
+
+.now {
+	color:blue;
+}
+.active {
+	 background-color: rgba(0,0,0,.3);
+}
+.tw_top {
+    width: 80%;
+    height:40px;
+    background-color: rgba(0,0,0,.3);
+    margin: 10px auto;
+}
+.tw_mid {
+    width: 40%;
+    height:80px;
+    background-color: rebeccapurple;
+    margin: 25px auto;
+}
+.tw_image {
+    width: 529px;
+    height:316px;
+    background-color: goldenrod;
+    margin: 0px auto;
+}
+.tw_digest {
+    width: 448px;
+    height: 16px;
+    line-height: 16px;
+    display: block;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+.tw_box {
+    width: 864px;
+    height: 160px;
+    background-color: green;
+    margin: 20px auto;
+    position: relative;
+}
+/*公共部分*/
+.yl_nav {
+    padding: 8px 15px;
+   
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    margin:20px auto;
+    width:60%;
+    
+
+}
+
+.yl_nav li {
+    display: inline;
+}
+
+/*侧边栏样式开始 公共样式*/
+.yl_aside{
+    width: 200px;
+    height: 600px;
+    background-color: whitesmoke;
+    /*position: absolute;*/
+    margin-left: 22px; 
+    font-size: 1.5rem;
+    border: 1px solid grey;
+    float: left; 
+
+}
+.yl_aside .user{
+    padding: 30px 20px;
+}
+.yl_aside .user img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.yl_aside .user span{
+    color: #000;
+    font-size: 12px;
+}
+.yl_aside .yl_menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.yl_aside .yl_menu ul li a{
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    color: #000000;
+    /*border: 3px solid transparent;*/
+    padding-left: 30px;
+    text-decoration: none;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+
+}
+.yl_aside .yi_menu ul li.now > a{
+    border-left-color: #3c8dbc;
+    background-color: #1d1f21;
+    color: #000;
+}
+
+/*侧边栏样式结束*/
+/*中部内容消息区开始*/
+.yl_content{
+    width: 800px;
+    float: left; 
+    margin-left:70px;
+    margin-top: -8px;
+}
+.yl_content .picTable{
+    float: left;
+    width: 45%;
+    height: 400px;
+}
+.yl_content .picTable:first-child{
+    margin-right: 10%;
+}
+
+.yl_content .table tr> th,.yl_content .table >td{
+    text-align: center;
+    background:rgba(0,0,0,0.1);
+}
+.yl_content .page{
+    text-align: right;
+}
+.yl_content .page .pagination{
+    margin-top: 0;
+}
+.yl_content span {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: block;
+}
+

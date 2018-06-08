@@ -1,0 +1,511 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"read",
+				"readURL"
+			],
+			[
+				"std",
+				"std_class_object_to_array"
+			],
+			[
+				"date_defa",
+				"date_default_timezone_set"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"is",
+				"isIE7"
+			],
+			[
+				"get",
+				"getSaveName"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"getTree",
+				"get_treeview"
+			],
+			[
+				"array",
+				"array"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "enso/webapp/js/act-enroll.js",
+			"settings":
+			{
+				"buffer_size": 7020,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "enso/webapp/act-enroll.jsp",
+			"settings":
+			{
+				"buffer_size": 5151,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package ",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Con",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Disable Package"
+			],
+			[
+				"phpfmt",
+				"phpfmt: indentation with spaces"
+			],
+			[
+				"php",
+				"PHP CodeBeautifier"
+			],
+			[
+				"Package Control: Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/eclipse-workspace/platform/enso/webapp"
+	],
+	"file_history":
+	[
+		"/F/opt/xampp/htdocs/demo/qrcodetest/index.html",
+		"/F/opt/xampp/htdocs/kissy/demo/dom.html",
+		"/F/opt/xampp/htdocs/kissy/api/getWeather.php",
+		"/F/opt/xampp/htdocs/runoob/04instruct.html",
+		"/F/opt/xampp/htdocs/runoob/03expression.html",
+		"/F/opt/xampp/htdocs/runoob/v-bind.html",
+		"/F/opt/xampp/htdocs/runoob/v-html.html",
+		"/F/opt/xampp/htdocs/runoob/vue2-hw.html",
+		"/F/opt/xampp/htdocs/phpwork/front/jsarray/addEvent.html",
+		"/F/opt/xampp/htdocs/phpwork/front/jsarray/timeChunk.html",
+		"/F/opt/xampp/htdocs/phpwork/front/xdomain/test.html",
+		"/F/opt/xampp/htdocs/phpwork/front/xdomain/index.html",
+		"/F/opt/xampp/htdocs/d3.js/csdn/index.html",
+		"/F/subversion/MBis/UI/test_pushed_sjz/Application/User/Controller/IndexController.class.php",
+		"/F/opt/xampp/htdocs/vue/projects/my-project/src/App.vue",
+		"/F/opt/xampp/htdocs/vue/projects/my-project/src/components/Hello.vue",
+		"/F/opt/xampp/htdocs/vue/demo/01simple.html",
+		"/F/opt/xampp/htdocs/vue/demo/03v-bind.html",
+		"/F/opt/xampp/htdocs/vue/demo/02v-html.html",
+		"/F/opt/xampp/htdocs/vue/projects/my-project/config/index.js",
+		"/F/opt/xampp/htdocs/vue/projects/my-project/build/build.js",
+		"/F/opt/xampp/htdocs/phpwork/front/event/index.html",
+		"/F/work/user/index.html",
+		"/F/work/user/js/index.js",
+		"/F/work/user/js/jquery-3.2.1.js",
+		"/F/opt/xampp/htdocs/d3.js/clock/js/index.js",
+		"/D/eclipse-workspace/platform/enso/webapp/include/shisheng/1.html",
+		"/D/eclipse-workspace/platform/活动采风/index.html",
+		"/F/tongfanglingxun/xycf/xycf.html",
+		"/F/tongfanglingxun/xycf/images/upload/sqyxcf-07.png",
+		"/F/opt/xampp/htdocs/d3.js/clock/css/style.css",
+		"/F/opt/xampp/htdocs/d3.js/clock/js/d3.v3.min.js",
+		"/F/opt/xampp/htdocs/d3.js/clock/index.html",
+		"/D/eclipse-workspace/platform/enso/src/main/java/com/tsinghuadtv/www/controller/SysUserController.java",
+		"/F/opt/xampp/htdocs/phpwork/fileupload/jqajax/js/upload.js",
+		"/E/test_pushed/Application/User/Controller/IndexController.class.php",
+		"/F/opt/xampp/htdocs/phpwork/jquery/form2json.html",
+		"/F/opt/xampp/htdocs/phpwork/jquery/wrap.html",
+		"/F/opt/xampp/htdocs/phpwork/jquery/js/jquery.min.js",
+		"/F/opt/xampp/htdocs/phpwork/front/html/dl_dt_dd/index.html",
+		"/F/opt/xampp/htdocs/amd/index.html",
+		"/F/opt/xampp/htdocs/amd/demo/index.html",
+		"/F/opt/xampp/htdocs/amd/echarts/doc/doc.html",
+		"/F/opt/xampp/htdocs/amd/zrender/src/config.js",
+		"/D/eclipse-workspace/Templates/demo/01simple.html",
+		"/D/eclipse-workspace/Templates/node_modules/chart.js/src/charts/Chart.Bar.js",
+		"/D/eclipse-workspace/platform/ENSO/webapp/css/my.css",
+		"/D/eclipse-workspace/platform/ENSO/webapp/mysettings.jsp",
+		"/F/code/supersized.js",
+		"/F/Templates/css/reset.css",
+		"/F/var/sandbox/wechat.txt",
+		"/F/var/sandbox/weichat.txt",
+		"/F/opt/xampp/htdocs/phpwork/front/testfont/css/style.css",
+		"/F/opt/xampp/htdocs/phpwork/front/testfont/index.html",
+		"/F/opt/xampp/htdocs/phpwork/front/testfont/font/说明.htm",
+		"/F/opt/xampp/htdocs/phpwork/front/requirejs/index.html",
+		"/F/opt/xampp/htdocs/phpwork/front/requirejs/js/app.js",
+		"/F/opt/xampp/htdocs/phpwork/front/requirejs/js/lib/jquery.js",
+		"/F/opt/xampp/htdocs/phpwork/front/requirejs/js/lib/canvas.js",
+		"/F/var/log/2017-10-10.html",
+		"/F/var/log/2017-10-09.html",
+		"/F/opt/xampp/htdocs/phpwork/front/suciahuo/css/index.css",
+		"/F/opt/xampp/htdocs/phpwork/front/suciahuo/index.html",
+		"/F/var/log/2017-10-17.html",
+		"/F/var/log/2017-10-16.html",
+		"/F/var/log/2017-10-13.html",
+		"/F/var/log/2017-10-12.html",
+		"/F/var/log/2017-10-11.html",
+		"/F/var/log/2017-09-30.html",
+		"/F/Templates/js/main.js",
+		"/F/Templates/js/util.js",
+		"/F/opt/xampp/htdocs/phpwork/front/suciahuo/css/common.css",
+		"/F/opt/xampp/htdocs/phpwork/front/suciahuo/js/jquery.cityselect.js",
+		"/F/opt/xampp/htdocs/phpwork/front/suciahuo/data/city.js",
+		"/F/opt/xampp/htdocs/phpwork/front/suciahuo/data/city.min.js",
+		"/F/Templates/js/mod-amd.js",
+		"/F/Templates/js/create.js",
+		"/D/workspace/font_436890_1lpct1x3y7wopqfr/demo.css",
+		"/F/Templates/js/prototype.js",
+		"/F/var/snippet/GetCurrentDateTime.java",
+		"/C/Users/Administrator/Documents/WeChat Files/berserker_blood/Files/userhome.jsp",
+		"/F/code/snippet/js/lib.js",
+		"/F/var/log/2017-09-29.html",
+		"/F/var/log/2017-09-28.html",
+		"/F/var/log/2017-09-27.html",
+		"/F/var/log/2017-09-26.html",
+		"/F/var/log/2017-09-25.html",
+		"/D/eclipse-workspace/server.xml",
+		"/U/log/material.txt",
+		"/F/var/note/material.txt",
+		"/D/eclipse-workspace/dump.bat",
+		"/D/eclipse-workspace/studyonline.sql",
+		"/F/var/log/2017-09-24.html",
+		"/F/var/log/2017-09-23.html",
+		"/F/var/log/2017-09-22.html",
+		"/F/var/log/2017-09-21.html",
+		"/F/var/log/2017-09-20.html",
+		"/F/var/log/2017-09-19.html",
+		"/F/opt/xampp/apache/conf/httpd.conf",
+		"/F/var/log/2017-09-18.html",
+		"/F/tongfanglingxun/会议纪要-2017-09-11.txt",
+		"/F/var/log/2017-09-16.html",
+		"/F/Templates/js/jquery.hislider.js",
+		"/C/Users/Administrator/Documents/WeChat Files/berserker_blood/Files/oneUpload.jsp",
+		"/F/subversion/PUSH_2.0/PushUI/Application/Content/Controller/EditController.class.php",
+		"/F/Templates/css/fullAvatarEditor.js",
+		"/F/var/log/2017-09-17.html",
+		"/D/apache-tomcat-8.0.46/webapps/videojs/css/video-js.css",
+		"/F/var/log/2017-09-15.php",
+		"/F/var/log/2017-09-14.php",
+		"/F/var/log/2017-09-13.html",
+		"/F/var/log/2017-09-12.html",
+		"/F/Templates/js/jquery.hiSlider.js",
+		"/F/Templates/js/jquery.hslider.js",
+		"/F/code/snippet/js/newregister.js",
+		"/F/var/log/2017-09-11.html",
+		"/F/var/log/2017-09-14.html",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/F/code/data/geo.js",
+		"/F/opt/xampp/htdocs/phpwork/front/event/example.css",
+		"/F/opt/xampp/htdocs/phpwork/front/event/remove.html",
+		"/F/opt/xampp/htdocs/phpwork/front/event/js/event_util.js",
+		"/F/opt/xampp/htdocs/phpwork/front/event/css/example.css",
+		"/F/opt/xampp/htdocs/phpwork/front/event/test.html",
+		"/F/opt/xampp/htdocs/phpwork/jquery/validate/index.html",
+		"/F/opt/xampp/htdocs/phpwork/front/school/idcardnum.js",
+		"/F/opt/xampp/htdocs/phpwork/front/school/geo.js",
+		"/F/opt/xampp/htdocs/phpwork/front/school/university/demo.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"slice",
+			"avatar",
+			"iframe",
+			"map",
+			"小学新生",
+			"集英小学进行月末作业检查",
+			"口算达标活动",
+			"汪莉芳老师莅临集英小学",
+			"相约清园",
+			"/>\n",
+			"       [",
+			"removeClass().addClass(\"security\");",
+			"ONGOING",
+			"alert",
+			"promptinfo",
+			"河南",
+			"imgarrowright",
+			"\"></",
+			"thuicon",
+			"审核",
+			"deleteEpisode",
+			"_assignDropdown",
+			"list_package_mission",
+			"ajax",
+			"width: 100%",
+			"primary",
+			"button",
+			"center",
+			"parse_str",
+			"web_root",
+			"error",
+			"10",
+			"200",
+			"IsExistedOID",
+			"Path",
+			"getLastInsID"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"OidExists"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "D:\\eclipse-workspace\\platform\\enso\\webapp"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "enso/webapp/js/act-enroll.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7020,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1935.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "enso/webapp/act-enroll.jsp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5151,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/Java/Java Server Pages (JSP).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1795.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"echarts",
+				"canvas\\echarts\\lib\\echarts.min.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 217.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

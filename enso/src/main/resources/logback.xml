@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration>
+	<appender name="FileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>../logs/enso.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+	       <fileNamePattern>../logs/enso.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+	       <maxFileSize>100MB</maxFileSize>    
+	       <maxHistory>30</maxHistory>
+	       <totalSizeCap>250MB</totalSizeCap>
+	    </rollingPolicy>
+
+		<encoder>
+		  <pattern>%d [%t] %p %c - %m%n</pattern>
+		  <charset>UTF-8</charset>
+		</encoder>
+	</appender>
+	
+	<appender name="AsyncFileAppender" class="ch.qos.logback.classic.AsyncAppender">
+		<queueSize>512</queueSize>
+		<neverBlock>true</neverBlock>
+		<appender-ref ref="FileAppender"/>
+	</appender>
+	
+	<logger name="com.tsinghuadtv" additivity="true" >
+		<level value="INFO" />
+	</logger>
+	
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="AsyncFileAppender" />
+	</root>
+
+</configuration>

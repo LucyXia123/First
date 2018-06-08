@@ -1,0 +1,220 @@
+@charset "utf-8";
+.content .thuimg .thuimga {
+    position: relative;
+    display: block;
+    margin: auto;    
+    z-index: 0;
+}
+
+.content .thuimg .thuimga .mainImg {
+	left: 0;
+	height: 400px;
+}
+
+.content .thuimg .thuimga #swfid {
+    margin: 0;
+    padding: 0;
+}
+
+#thuimgWrap > a {
+    height: 400px !important;
+    background-color: #ccc;
+}
+
+.content .thuimg .imgarrow {
+    position: absolute;
+    color: #fff;
+    font-size: 50px;
+    top: -220px;
+    cursor: pointer;
+    padding: 2px 0 2px 6px;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    overflow: hidden;
+    border-radius: 40px;
+    border: 2px solid #fff;
+    width: 60px;
+    height: 60px;
+}
+
+.content .thuimg .imgarrow:before {
+    margin: 0;
+}
+
+.content .thuimg .imgarrow.imgarrowleft {
+    left: 20px;
+    padding: 2px 6px 2px 0;
+    /* background-image: url(../images/svg/arrowleft.svg); */
+    position: absolute;
+}
+
+.content .thuimg .imgarrow.imgarrowright {
+    right: 20px;
+    /* background-image: url(../images/svg/arrowright.svg); */
+}
+
+.content .thuimg .imgarrow.imgarrowleft > img, .content .thuimg .imgarrow.imgarrowright > img {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 38px;
+    height: 40px;
+}
+
+.content .thuimg .imgarrow.imgarrowleft:hover, .content .thuimg .imgarrow.imgarrowright:hover {
+    background: #333;
+}
+
+.content .thuimg .month .arrowright:hover, .content .thuimg .month .arrowleft:hover {
+    background: #72db67;
+}
+
+.content .thuimg .imgTitle {
+    position: absolute;
+    top: -58px;
+    left: 0;
+    z-index: 1;
+    width: 900px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.content .thuimg .imgTitle .bg {
+    position: absolute;
+    z-index: -1;
+    height: 50px;
+    background: #252525;
+    filter: alpha(opacity=50);
+    opacity: .5;
+    width: 100%;
+    bottom: 0;
+}
+
+.content .thuimg .imgTitle .txt {
+    color: #fff;
+    font-size: 18px;
+    line-height: 58px;
+    padding-left: 30px;
+    white-space: nowrap;
+}
+
+.content .thuimg .imgTitle .day {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    /*background: #36b559;*/
+    background-color: #204d74;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+}
+
+.content .thuimg .imgTitle .day.today {
+    font-size:24px;
+}
+
+.content .thuimg .month {
+    background-color: #204d74;
+    position: relative;
+    height: 38px;
+    margin-top: -32px;
+}
+
+.content .thuimg .month .arrow {
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    line-height: 38px;
+    padding: 5px 3px;
+    cursor: pointer;
+}
+
+.content .thuimg .month .arrowleft {
+    left: 0;
+}
+
+.content .thuimg .month .arrowright {
+    right: 0;
+}
+
+.content .thuimg .month .arrow {
+    width: 30px;
+    height: 36px;
+    line-height: 36px;
+}
+
+.content .thuimg .month .arrowleft > span:before, .content .thuimg .month .arrowright > span:before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 0.25em 0.25em 0;
+    height: 1em;
+    top: 1.0em;
+}
+/* < */
+.content .thuimg .month .arrow.arrowleft > span:before {
+    left: .8em;
+    transform: rotate(140deg);
+    width: 1em;
+}
+/* > */
+.content .thuimg .month .arrow.arrowright > span:before {
+    left: .6em;
+    transform: rotate(-45deg);
+    width: 1em;
+}
+
+.content .thuimg .month .monthTxt {
+    float: left;
+    margin: 0 0 0 20px;
+    color: #fefefe;
+}
+
+.content .thuimg .month .monthTxt span {
+    font-size: 20px;
+    line-height: 38px;
+    padding-right: 3px;
+    color: #fff;
+}
+
+.content .thuimg .month .day {
+    float: left;
+}
+
+.content .thuimg .month .day a.current {
+    color: #ffc600;
+    zoom: 1.2;
+    line-height: 24px;
+}
+
+.content .thuimg .month .day > li {
+    float: left;
+    font-size: 12px;
+    padding: 4px 2px;
+}
+
+.content .thuimg .month .day > li > a {
+    color: #fff;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    width: 22px;
+    cursor: pointer;
+    zoom: 1;
+}
+
+.content .thuimg .month .day > li > a.none {
+    color: #999;
+}
+
+.content .thuimg .month .day > li > a:hover {
+    background-color: #286090;
+}
+
+.content .thuimg .month .day > li > a.focus {
+    background-color: #286090;
+}

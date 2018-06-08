@@ -1,0 +1,44 @@
+[{
+    "id": "1",
+    "name": "学生风采",
+    "school": "开封市马市街小学",
+    "date": "2017年12月12日",
+    "content":
+    [
+        "学生风采"
+    ],
+    "img": "./studentView/sx1_c1.jpg"
+},
+{
+    "id": "2",
+    "name": "学生风采",
+    "school": "开封市马市街小学",
+    "date": "2017年12月12日",
+    "content":
+    [
+        "学生风采"
+    ],
+    "img": "./studentView/sx2_c1.jpg"
+},
+{
+    "id": "3",
+    "name": "学生风采",
+    "school": "开封市马市街小学",
+    "date": "2017年12月12日",
+    "content":
+    [
+        "学生风采"
+    ],
+    "img": "./studentView/sx3_c1.jpg"
+},
+{
+    "id": "4",
+    "name": "学生风采",
+    "school": "开封市马市街小学",
+    "date": "2017年12月12日",
+    "content":
+    [
+        "学生风采"
+    ],
+    "img": "./studentView/sx4_c1.jpg"
+}]

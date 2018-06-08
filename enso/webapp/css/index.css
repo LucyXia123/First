@@ -1,0 +1,416 @@
+/* CSS reset */
+body,div,ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,select,option,td,th,form,fieldset,input,textarea{padding:0;margin:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:none;}
+address,em,th{font-style:normal;font-weight:normal;}
+caption,th{text-align:left;}
+ol,ul{list-style:none outside none;}
+h1,h2,h3,h4,h5,h6{font-size:16px;font-family:"\5FAE\8F6F\96C5\9ED1";font-weight:normal;}
+body #yxcf_responsive {font:24px/1.8em "\5B8B\4F53";color:#838383;}
+/* Global style */
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{zoom:1;}
+.left{float:left;}
+.right{float:right;}
+
+/* main */
+.main {
+    width: 1206px;
+    margin: 50px auto 0;
+    padding: 20px 0 0;
+}
+
+.logoTab{position:absolute;top:-64px;left:0;height:32px;padding-top:8px;z-index:9999;}
+.logoTab li{float:left;color:#555555;margin-left:1px;height:32px;line-height:32px;font-family:"\5FAE\8F6F\96C5\9ED1";font-size:16px;padding-right:30px;}
+/* .logoTabFilter > li.select > a { color: #5fbdee; } */
+
+.logoTabMore{position:absolute;top:-64px;right:0;height:32px;padding-top:8px;z-index:9999;padding-right:28px;}
+.logoTabMore li{float:left;color:#555555;margin-left:20px;height:32px;line-height:32px;font-family:"\5FAE\8F6F\96C5\9ED1";font-size:16px;}
+.logoTabMore a{display:block;color:#555555;font-family:"\5FAE\8F6F\96C5\9ED1";font-size:16px;}
+.logoTabMore a:hover{display:block;color:#5fbdee;font-family:"\5FAE\8F6F\96C5\9ED1";font-size:16px;}
+
+.XTCFList{overflow:hidden;}
+.XTCFList li{float:left;margin-right:20px;width:280px;height:240px;background-color:#FAFAFA;overflow:hidden;}
+.XTCFList .unit{position:relative;z-index:4;height:240px;}
+.XTCFList .hoverline{display:none;height:2px;width:100%;background-color:#0fcac8;position:absolute;top:0;left:0;}
+.XTCFList .images{display:block;height:185px;width:280px;overflow:hidden;}
+.XTCFList .images img{display:block;max-height:185px;max-width:280px;}
+.XTCFList h1{text-align:center;padding-top:6px;}
+.XTCFList dl{padding:4px 10px 10px 30px;}
+.XTCFList dd{white-space:nowrap;overflow:hidden;height:26px;line-height:26px;}
+/*0fcac8  C68D43*/
+.view{position:absolute;z-index:500;left:0;bottom:-60px;width:100%;height:58px;background-color:#FAFAFA;font-size:14px;font-family:"\5FAE\8F6F\96C5\9ED1";border-bottom:2px solid #0fcac8;}
+.view .left{padding-left:30px;}
+.view .right{background-color:#0fcac8;color:#fff;display:block;height:30px;line-height:30px;width:80px;text-align:center;}
+.view .right span{font-family:"\5B8B\4F53";font-size:16px;padding-left:6px;}
+.view .right:hover{background-color:#2D2D2D;}
+
+/* allXYCF */
+.allXYCF{position:relative;z-index:2;}
+.logoTabFilter{position:absolute;top:-64px;right:0;height:32px;padding-top:8px;z-index:9999;padding-right:80px;}
+.logoTabFilter li{float:left;color:#555555;margin-left:20px;height:32px;line-height:32px;font-family:"\5FAE\8F6F\96C5\9ED1";font-size:16px;}
+.logoTabFilter li:hover{color:#5fbdee;}
+.logoTabFilter li.select{color:#5fbdee;}
+.logoTabFilter a{display:block;color:#555555;font-family:"\5FAE\8F6F\96C5\9ED1";font-size:16px;}
+.logoTabFilter a:hover{display:block;color:#5fbdee;font-family:"\5FAE\8F6F\96C5\9ED1";font-size:16px;}
+.logoTabFilter a.select{color:#5fbdee;}
+
+.allXYCF .XTCFList{width:1206px;}
+.allXYCF li{margin-bottom:20px;}
+.loadMore{width:100%;height:40px;border-top:1px solid #C68D43;position:relative;z-index:2;}
+.loadMore a{position:absolute;height:40px;line-height:40px;text-align:center;width:140px;color:#fff;background-color:#C68D43;left:45%;top:-20px;font-size:14px;}
+.loadMore a:hover{background-color:#2d2d2d;}
+
+/* isotope */
+.isotope-item{z-index:2}
+.isotope-hidden.isotope-item{pointer-events:none;z-index:1}
+.isotope,.isotope .isotope-item{
+	-webkit-transition-duration:0.8s;
+	-moz-transition-duration:0.8s;
+	-ms-transition-duration:0.8s;
+	-o-transition-duration:0.8s;
+	transition-duration:0.8s
+}
+.isotope{
+	-webkit-transition-property:height, width;
+	-moz-transition-property:height, width;
+	-ms-transition-property:height, width;
+	-o-transition-property:height, width;
+	transition-property:height, width
+}
+.isotope .isotope-item{
+	-webkit-transition-property:
+	-webkit-transform, opacity;
+	-moz-transition-property:-moz-transform, opacity;
+	-ms-transition-property: -ms-transform, opacity;
+	-o-transition-property:top, left, opacity;
+	transition-property:transform, opacity
+}
+.isotope.no-transition,.isotope.no-transition .isotope-item,.isotope .isotope-item.no-transition{
+	-webkit-transition-duration:0s;
+	-moz-transition-duration:0s;
+	-ms-transition-duration:0s;
+	-o-transition-duration:0s;
+	transition-duration:0s
+}
+/* end isotope */
+
+.content-wrapper {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 1206px;  
+}
+
+.content-wrapper > .tv {
+  margin-top: 50px;  
+}
+
+.content-wrapper > .module:after {
+  clear: left;
+}
+
+.content-wrapper > .module h2 {
+   color: #555555;   
+   font: 18px/1.0 "Microsoft YaHei";
+   font-weight: normal;
+   display: inline-block;
+}
+
+.module > ul.card-list {
+  margin-top: 20px;
+  height: 150px;
+}
+
+.module > ul.card-list > li {
+  float: left;
+  margin-right: 39px;
+}
+
+.module > ul.card-list > li .img {
+    width: 210px;
+    height: 130px;
+    background-repeat: no-repeat;
+}
+
+.module > ul.card-list > li.last-item {
+  margin-right: 0;
+}
+
+.module-header > .badge {
+  font-size: 20px;
+  padding: 6px;
+  color: #ffffff;
+  border-radius: 0;
+  font-weight: 500;
+  display: inline-block;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.teacher .badge {
+    background-color: #ee955f;
+}
+
+.course .badge {
+    background-color: #3FBE63;
+}
+
+.activity .badge {
+    background-color: #F7CE72;
+}
+
+.module-body:after {clear: both;}
+
+.act-list > .act-item {
+  width: 390px;
+  height: 100px;
+  display: inline-block;
+  float: left;
+  margin: 10px 10px 20px 0;
+}
+
+.act-list > .act-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.act-list > .act-item > .pull-left > img {
+  width: 100px;
+  height: 100px;
+}
+
+.act-list > .act-item > .pull-right {
+  width: 290px;
+  padding-left: 10px;
+}
+
+.act-title > h4 {color: #2b2b2b;}
+.act-title:hover > h4 {color:#F7CE72; }
+
+.act-content {
+  padding: .5em 0;
+  font-size: 14px;
+}
+
+.act-metas {
+  float: right;
+  color: #F9CD74;
+}
+
+.module > .module-header .area-list {
+  font-size: 16px;
+  color: #555555;
+  float: right;
+  margin-right: 26px;
+}
+
+.module > .module-header .area-list > li {
+   float: left;
+   margin-left: 1em;
+}
+
+.module > .row {
+  padding: 30px 0;
+}
+
+.teacher > .module-header .area-list > li.active > a, .teacher > .module-header .area-list > li.hover > a {
+   color: #ee955f;
+}
+
+.teacher > .module-header .area-list > li > a {
+    color: #555555;
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+    font-size: 16px;
+}
+
+.teacher > .module-header > h2, .course > .module-header > h2, .activity > .module-header > h2 {
+  height: 38px;
+  line-height: 38px;
+}
+
+#teacher {
+  width: 450px;
+  height: 400px;
+  position: relative;
+  float: left;
+  margin-left: 10px;  
+}
+
+#teacher > .hiSlider-wrap {
+    overflow: hidden;
+    position: relative;
+    width: 450px;
+    height: 400px;
+}
+
+#teacher > .hiSlider-wrap img {
+    width: 450px;
+    height: 400px;
+}
+
+#student {  
+  width: 720px;
+  height: 450px;
+  float: left;    
+  margin-left: 30px;  
+}
+
+#student > .student-list > .card {
+  float: left;  
+  margin-right: 20px;
+}
+
+#student > .student-list > .card:nth-child(3n) {
+  margin-right: 0;
+}
+
+#student > .student-list > .card > a > img {
+  width: 220px;
+  height: 155px;
+}
+
+.card-metas > p {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+    width: 220px;    
+}
+
+.card-metas > span {
+    font-size: 14px;
+    color: #666;
+    float: right;
+    margin: 0;
+    line-height: 1em;
+    padding-bottom: 5px;
+}
+/* .learn > .module-header > .badge {} */
+.module {
+  font-size: 14px;
+  line-height: 20px;
+  clear: both;
+}
+
+.course {
+	padding-bottom: 60px;
+}
+
+.course .clearfix .pull-left {
+  width: 790px;
+}
+
+.course .clearfix .pull-right {
+  width: 320px;
+  margin-right: 30px;
+}
+
+.course-item {
+    margin-top: 10px;
+    clear: both;
+    height: 120px;
+    position: relative;
+}
+
+.course-item > a:first-child {
+  float: left;
+}
+
+.course-item > a > img {
+	width: 180px;
+	height: 120px;
+}
+
+.course-item .course-info {
+    width: 600px;
+    height: 120px;
+    position: relative;
+    float: right;
+}
+
+.course-item .course-info .course-title {
+  font-weight: bold;
+  color: #161616;
+  font-size: 14px;
+}
+
+.course-item .course-info .course-content {
+  padding: 8px 0;
+  color: #666;
+}
+
+.course-item .course-info .course-metas .click2watch {
+    padding: 6px 20px;
+    border: 1px solid #B2D382;
+    color: #89BA3A;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.course-item .course-info .course-metas > .watch {
+  color: #888;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.choose_right {
+    width: 285px;
+}
+
+.paper_download ul {
+  margin-bottom: 20px;
+}
+
+.index_h4 {
+  border-bottom: 2px solid #e3e3e3;
+  color: #616161;
+  font-size: 16px;
+  height: 18px;
+  margin: 10px 0 0;
+  padding-bottom: 5px;
+}
+
+.choose_right .index_h4 {
+  font-weight: bold;
+  height: 24px;
+  line-height: 20px;
+  text-rendering: optimizelegibility;
+}
+
+.index_h4 a {
+  color: #bfbfbf;
+  float: right;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.unstyled.zhenti li {
+    background: url(../images/index1.7.png) no-repeat scroll left center;
+    border-bottom: 1px dashed #c9c9c9;
+    color: #545454;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    padding-left: 22px;
+}
+
+.unstyled.zhenti li a {
+    color: #1e1e1e;
+}
+
+#activity-banner {
+  height: 200px;
+  display: block;
+}
+
+#activity-banner > div {    
+    background: url(../images/carousel/xiaozuojia1.jpg) center center no-repeat;
+    height: 200px;
+}

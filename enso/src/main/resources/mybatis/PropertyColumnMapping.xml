@@ -1,0 +1,11 @@
+<mapper>
+    <filter name="com.tsinghuadtv.www.model.filter.report.ReportFilter">
+    	<property name="createTime" column="tr.create_time" />
+    	<property name="approveTime" column="tr.approve_time" />
+		<property name="viewCount" column="tr.view_count" />	
+		<property name="commentCount" column="tr.comment_count" />
+		<property name="likeCount" column="tr.like_count" />
+		<property name="recommended" column="tr.is_recommended" />
+		<property name="sequence" column="tr.sequence" />
+	</filter>
+</mapper>

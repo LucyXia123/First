@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<link rel="stylesheet" type="text/css" href="./upload1/style.css">-->
+        <link rel="stylesheet" type="text/css" href="upload1/jquery.fileupload.css">
+        <script src="jquery.js"></script>
+        <script src="upload1/jquery-form.js"></script>
+        <!--<script src="upload1/jquery.ui.widget.js"></script>-->
+        <script src="upload1/jquery.iframe-transport.js"></script>
+        <script src="upload1/jquery.fileupload.js"></script>
+        <!--<script src="upload1/sprintf.min.js"></script>-->
+        <script>
+            $(function ()
+            {
+                var uploader = $("#fileupload");
+                uploader.fileupload({
+//                url: "/tomography/pool",
+                url:"/moreUpload/files",
+                autoUpload: false,
+                singleFileUploads: false,   // true: 每个文件各自使用一个add事件进入队列，并单独占用一个POST请求上传
+                                            // false: 同一批次的文件集合通过一个add事件进入队列，并通过同一个POST请求上传
+                                            // 所谓批次，就是指一次选择（browse）或拖放（drag & drop）。
+                                            // 也就是说，每个add事件分别对应一个POST消息。
+                sequentialUploads: false,   // true: POST请求按序依次发出，且后一请求仅在前一请求执行完毕后才发出（阻塞模式）。
+                                            // false: POST请求同时发出，并行上传（非阻塞式）。
+                add: function (e, data) {
+                    if (data.files.length > 0)
+                    {
+                        data.submit();
+                    } 
+                },
+                progressall: function (e, data) {
+                    var pg = parseInt(100 * data.loaded / data.total, 10);
+                    $("#progress .bar").css({"width": pg+"%", "background": "yellow"});
+                    if (pg >= 90)
+                    {
+                        $("#progress_display_percent_id").css("margin-left",(pg-15)+"%").html(pg+"%");
+                    }
+                    else
+                    {
+                        $("#progress_display_percent_id").css("margin-left",pg+"%").html(pg+"%");
+                    }
+
+                },
+                done: function (e, data) {
+                    // finish
+                    $("#progress .bar").css({"width": "100%", "background": "green"});
+                    $("#message_id").html("成功上传个数：" + data.result.count);
+                    $("#message_id").fadeIn();
+                    $("#message_id").fadeOut(10000);
+                },
+                fail: function (e, data) {
+                    // cancel or fail
+                    $("#progress .bar").css("background", "red");
+                    $("#message_id").html("文件上传失败！");
+                    $("#message_id").fadeIn();
+                    $("#message_id").fadeOut(10000);
+                }
+            });
+            });
+        </script>
+    </head>
+    <body>
+        <a class="item" onclick="file_window_id.click()"><span>添加文件</span><div id='fileupload' ><form id='form' method='post' enctype='multipart/form-data'><input type="file" id="file_window_id" style="display: none;"  name="files" multiple /></form></div></a>
+        <div  id='progress' style="width: 100%;" >
+            <div class="bar" style="width: 0%;height: 18px;" ><span style="color: black;position: relative;" id="progress_display_percent_id"></span></div>
+        </div>
+    </body>
+</html>

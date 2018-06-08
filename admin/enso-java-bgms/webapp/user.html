@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>ENSO后台管理&middot;用户查询</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <style>
+/* overwrite modal */
+.modal {
+  top: 10%;
+}
+/* user detail */
+#user-detail {
+    height: 20em;
+    font-size: 14px;
+}
+#user-detail > dt, #user-detail > dd {
+    line-height: 28px;
+}
+    </style>
+    <!--[if lt IE 9]><script src="./assets/js/libs/html5shiv.js"></script><![endif]-->
+    <script src="assets/js/jquery.js"></script>
+</head>
+
+<body>
+
+<section id="container" >
+    <!-- **********************************************************************************************************************************************************
+    TOP BAR CONTENT & NOTIFICATIONS
+    *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg" id="js-header">
+        <script>$("#js-header").load("include/header.html");</script>
+    </header>
+    <!--header end-->
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN SIDEBAR MENU
+    *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+        <div id="sidebar"  class="nav-collapse "></div>
+        <script>$("#sidebar").load("include/sidebar.html")</script>
+    </aside>
+    <!--sidebar end-->
+    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
+
+    <!-- **********************************************************************************************************************************************************
+    MAIN CONTENT
+    *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-panel">
+                        <h4 class="mb"><i class="fa fa-angle-right"></i>用户查询</h4>
+                        <form id="form-query" class="form-inline" role="form">
+                            <div class="form-group">
+                                <label for="i-username">用户名: </label>
+                                <input type="text" class="form-control" id="i-username" name="username" placeholder="按用户名查找">
+                            </div>
+                            <div class="form-group">
+                                <label for="i-telephone">手机号: </label>
+                                <input type="text" class="form-control" id="i-mobile" name="mobile" placeholder="按手机号查找">
+                            </div>
+                            <button type="submit" class="btn btn-theme">查询</button>
+                        </form>
+                    </div>
+                </div><!-- /col-lg-12 END SECTION MIDDLE -->
+            </div><! --/row -->
+
+            <div class="row mt">
+                <div class="col-md-12">
+                    <div class="content-panel">
+                        <h4><i class="fa fa-angle-right"></i>用户列表</h4><hr>
+                        <table class="table table-striped table-advance table-hover">
+                        <thead>
+                        <tr>
+                            <th><i class="fa fa-user"></i> 用户名</th>
+                            <th class="hidden-phone"><i class="fa fa-phone"></i>手机号</th>
+                            <th><i class="fa fa-address-book-o"></i> 邮箱</th>
+                            <th><i class="fa fa-institution"></i> 学校</th>
+                            <th><i class="fa fa-home"></i> 班级</th>
+                            <th><i class="fa fa-user-o"></i>真实姓名</th>
+                            <!-- <th><i class="fa fa-edit"></i> 操作</th> -->
+                        </tr>
+                        </thead>
+                        <tbody id="js-list">
+                        <!-- 
+                        <tr data-usernumber="STU201709301049030001">
+                            <td><a href="javascript:;">mingzhanghui</a></td>
+                            <td>13001919562</td>
+                            <td>1335250574@qq.com</td>
+                            <td>开封7中</td>
+                            <td>一年级1班</td>
+                            <td>明章辉</td>
+                        </tr>
+                         -->
+                        </tbody>
+                    </table>
+                    </div><!-- /content-panel -->
+                    <nav aria-label="Page navigation" class="pagination-wrapper">
+                    <!--
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                     -->
+                    </nav>
+                </div><!-- /col-md-12 -->
+            </div>
+        </section>
+    </section>
+
+    <!--main content end-->
+</section>
+
+<div id="myModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">用户详情</h4>
+            </div>
+            <div class="modal-body">
+                <dl id="user-detail">                    
+                    <dt> ソフトドリンク</dt><dd>一般の飲料</dd>
+                    <dt> お酒</dt><dd>アルコール入り飲料</dd>
+                    <dt>炭酸飲料</dt><dd>炭酸ガスの入った飲料</dd>                    
+                </dl>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+<script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+<!--common script for all pages-->
+<script src="assets/js/common-scripts.js"></script>
+<script src="assets/js/user.js"></script>
+</body>
+</html>

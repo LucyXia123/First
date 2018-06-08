@@ -1,0 +1,15 @@
+RemoteSystemsTempFiles/*
+Servers/*
+enso/target/classes/com/*
+enso/openstyle/*
+enso/.settings/*
+enso/target/m2e-wtp/web-resources/META-INF/maven/com.tsinghuadtv.enso/ENSO/.settings/*
+admin/enso-java-bgms/.settings/*
+enso/*.sublime-workspace
+enso/*.sublime-project
+*.class
+*.zip
+target
+.settings
+.classpath
+.project

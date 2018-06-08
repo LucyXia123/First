@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsinghuadtv.www.mapper.AskMapper">
+
+	<resultMap id="askQuestionResult" type="AskQuestion">
+		<id property="id" column="ask_question_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="context" column="ask_question_context" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="sequence" column="ask_question_sequence" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="askId" column="ask_question_ask_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		
+		<collection property="choices" ofType="AskQuestionChoice" resultMap="askQuestionChoiceResult"/>
+	</resultMap>
+	
+	<resultMap id="askQuestionChoiceResult" type="AskQuestionChoice">
+		<id property="id" column="ask_question_choice_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="choice" column="ask_question_choice_choice" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="content" column="ask_question_choice_content" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="askQuestionId" column="ask_question_choice_ask_question_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+	</resultMap>
+	
+	<sql id="askQuestionColumns">
+		taq.id AS ask_question_id,
+		taq.context AS ask_question_context,
+		taq.sequence AS ask_question_sequence,
+		taq.ask_id AS ask_question_ask_id		
+	</sql>
+	
+	<sql id="askQuestionChoiceColumns">
+		taqc.id AS ask_question_choice_id,
+		taqc.choice AS ask_question_choice_choice,
+		taqc.content AS ask_question_choice_content,
+		taqc.ask_question_id AS ask_question_choice_ask_question_id		
+	</sql>
+	
+	<select id="selectAskQuestionsByTaskId" parameterType="map" resultMap="askQuestionResult">
+		SELECT
+			<include refid="askQuestionColumns" />,
+			<include refid="askQuestionChoiceColumns" />
+		FROM
+			t_ask_question taq
+			INNER JOIN t_ask_question_choice taqc ON taqc.ask_question_id = taq.id
+			INNER JOIN t_ask ta ON ta.id = taq.ask_id
+		WHERE
+			ta.task_id = #{taskId}
+		ORDER BY 
+			taq.sequence, taqc.choice
+	</select>
+	
+	<insert id="batchInsertUserAskQuestionAnswers" parameterType="java.util.List">
+		INSERT INTO t_user_ask_question_answer (
+			`answer`,
+			`user_number`,
+			`ask_question_id`
+		) VALUES
+		<foreach collection="answers" item="answer" separator=",">
+			(
+				#{answer.answer},
+				#{answer.userNumber},
+				#{answer.askQuestionId}
+			)
+		</foreach>
+	</insert>
+    
+</mapper>

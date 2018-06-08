@@ -1,0 +1,55 @@
+[{
+    "id": "0",
+    "title":"开封市马市街小学",
+    "img":
+    [
+        {"src":"./schoolView/xyfc_c1.jpg", "desc":""}, 
+        {"src":"./schoolView/xyfc_c2.jpg", "desc":""}, 
+        {"src":"./schoolView/xyfc_c3.jpg", "desc":""}, 
+        {"src":"./schoolView/xyfc_c4.jpg", "desc":""}
+    ]
+},
+{
+    "id": "1",
+    "title":"开封市马市街小学 - 校园",
+    "img":
+    [
+        {"src":"./schoolView/cf1_c1.jpg", "desc":""}, 
+        {"src":"./schoolView/cf1_c2.jpg", "desc":""}, 
+        {"src":"./schoolView/cf1_c3.jpg", "desc":""}, 
+        {"src":"./schoolView/cf1_c4.jpg", "desc":""}
+    ]
+},
+{
+    "id": "2",
+    "title":"开封市马市街小学 - 教室",
+    "img":
+    [
+        {"src":"./schoolView/cf2_c1.jpg", "desc":""}, 
+        {"src":"./schoolView/cf2_c2.jpg", "desc":""}, 
+        {"src":"./schoolView/cf2_c3.jpg", "desc":""}, 
+        {"src":"./schoolView/cf2_c4.jpg", "desc":""}
+    ]
+},
+{
+    "id": "3",
+    "title":"待上线",
+    "img":
+    [
+        {"src":"./schoolView/cf3.jpg", "desc":""}, 
+        {"src":"./schoolView/cf3.jpg", "desc":""}, 
+        {"src":"./schoolView/cf3.jpg", "desc":""}, 
+        {"src":"./schoolView/cf3.jpg", "desc":""}
+    ]
+},{
+    "id": "4",
+    "title":"待上线",
+    "img":
+    [
+        {"src":"./schoolView/cf4.jpg", "desc":""}, 
+        {"src":"./schoolView/cf4.jpg", "desc":""}, 
+        {"src":"./schoolView/cf4.jpg", "desc":""}, 
+        {"src":"./schoolView/cf4.jpg", "desc":""}
+    ]
+}
+]

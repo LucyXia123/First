@@ -1,0 +1,116 @@
+
+/*闂瓟鏍峰紡寮�濮�*/
+.ask_box {
+    width: 900px;
+    height: 850px;
+    margin: 100px auto;
+    /*background-color: antiquewhite;*/
+    border: 2px dashed cornflowerblue;
+    position: relative;
+
+}
+.ask_box  .ct{
+    width:100%;
+    height:60px ;
+    border-bottom: 2px dashed cornflowerblue;
+    display: block;
+    line-height: 60px;
+    padding-left: 10px;
+   font-size: 2rem;
+}
+#ask_form {
+
+    margin: 35px auto;
+    border: 2px dashed #ccc;
+    /*margin: 20px 0 0 40px;*/
+    width:760px;
+    display: block;
+    background-color: antiquewhite;
+
+}
+.item_content label {
+    width: 100px;
+    height: 30px;
+    text-align: right;
+    line-height:30px ;
+    font-size: 2rem;
+    z-index: 111;
+    float: left;
+    display: block;
+    margin-right:20px;
+
+}
+.item_content{
+    border-width: 0px;
+    width: 500px;
+    height: 45px;
+    margin: 30px auto;
+    line-height: 45px;
+}
+
+.item_content select ,.ask_box .item input {
+    float: left;
+    width: 369px;
+    height: 40px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #000000;
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+
+input[type="radio"]{
+    display: none;
+}
+input[type='radio']+label:before{
+    margin-top: -2px;
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    border-radius: 100%;
+    vertical-align: middle;
+    border: 1px solid #E4E4E4;
+    background: #FFFFFF;
+}
+
+input[type='radio']:checked+label:before{
+    background-color:orange;
+    /*background: #777777;*/
+}
+#item_standard_input {
+    width:288px;
+    height: 30px;
+
+
+}
+#item_standard span {
+    width: 50px;
+    display: inline-block;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+/*鎻愪氦鎸夐挳寮�濮�*/
+#save {
+    width: 80px;
+    height: 40px;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 50px;
+    margin-left: 340px;
+    border: none;
+    background-color:cornflowerblue;
+}
+
+
+/*闂瓟鏍峰紡缁撴潫*/

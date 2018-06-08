@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsinghuadtv.www.mapper.InformMapper">
+    <select id="getInform" parameterType="int" resultType="Inform">
+        select * from t_inform where id=#{id} limit 1
+    </select>
+    <select id="listInform" parameterType="int" resultType="Inform">
+        select id, title, url, date from t_inform order by id desc limit #{lim}
+    </select>
+    <select id="relatedInform" parameterType="int" resultType="Inform">
+    	select id, title from t_inform where id!=#{id} order by rand() limit 6
+    </select>
+</mapper>

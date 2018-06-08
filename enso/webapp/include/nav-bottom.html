@@ -1,0 +1,98 @@
+ <style>
+ ol, ul {
+    list-style: none outside none;
+}
+ .nav-bottom {
+    width: 100%;
+    height: 230px;
+    position: relative;    
+}
+.nav-bottom > div {
+    float: left;
+    width: 33.3333%;
+    height: 180px;
+}
+.nav-bottom > .mynav h5 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #393939;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.nav-bottom > .mynav > div {
+    width: 33.3333%;
+    float: left;
+}
+.nav-bottom .nav-list > li > a {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+}
+.nav-bottom > .link > a {
+    width: 50%;
+    display: inline-block;
+    float: left;    
+}
+.nav-bottom > .link > a > img {
+    zoom: 1;
+    margin-left: 20px;
+}
+.nav-bottom > .mynav:after, .nav-bottom > .link:after {
+    content: " ";
+    background-color: #ccc;
+    height: 150px;
+    width: 1px;
+    float: left;
+    position: absolute;
+    top: 0;
+}
+.nav-bottom > .tsinghua > a > img {
+    width: 100px;
+    height: 120px;
+    margin: 0 5px 0;
+}
+.nav-bottom > .tsinghua > a:first-child > img {
+    margin-left: 20px;
+}
+ </style>
+  <div class="nav-bottom">
+      <div class="mynav">
+        <div>
+          <h5>优质课程</h5>
+          <ul class="nav-list">
+            <li><a href="http://www.shuxuejia.com/" target="_blank">数学加</a></li>
+            <li><a href="http://casuser.chuanyang100.com" target="_blank">穿杨模考</a></li>
+            <!-- <li><a href="http://www.tsinghua.edu.cn/publish/newthu/newthu_cnt/research/research-1.html" target="_blank">清华课题</a></li> -->
+          </ul>
+        </div>
+        <div>
+          <h5>新手帮助</h5>
+          <ul class="nav-list">
+            <li><a href="404tbd.jsp" target="_blank">功能介绍</a></li>
+            <li><a href="act-upload.jsp" target="_blank">内容上传</a></li>
+            <li><a href="mycredit.jsp" target="_blank">积分系统</a></li>
+            <li><a href="404tbd.jsp" target="_blank">客户服务</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>我的</h5>
+          <ul class="nav-list">
+            <li><a href="mycredit.jsp" target="_blank">我的积分</a></li>
+            <li><a href="mycourse.jsp" target="_blank">我的课程</a></li>
+            <li><a href="mytime.jsp" target="_blank">我的学时</a></li>
+            <li><a href="mysettings.jsp" target="_blank">我的账号</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="link">
+        <a href="http://casuser.chuanyang100.com" target="_blank"><img src="./images/bottom/chuanyang.png" /></a>
+        <a href="http://www.shuxuejia.com" target="_blank"><img src="./images/bottom/xuezhong.png" /></a>
+      </div>
+      <div class="tsinghua">
+        <a href="http://www.tsinghua.edu.cn" target="_blank" title="清华大学"><img src="./images/bottom/thu.png" /></a>
+        <a href="http://www.qhfz.edu.cn" target="_blank" title="清华附中"><img src="./images/bottom/thfz.png" /></a>
+        <a href="http://www.tongfangpc.com" target="_blank" title="清华同方"><img class="last" src="./images/bottom/thtf.png" /></a>
+      </div>
+   </div>
+   <!-- END .nav-bottom -->

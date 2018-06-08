@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+	
+<configuration>
+	<typeAliases>
+		<typeAlias alias="Bool" type="com.tsinghuadtv.www.model.Bool"/>
+		<typeAlias alias="EnumIdTypeHandler" type="com.tsinghuadtv.www.mybatis.typehandler.EnumIdTypeHandler"/>
+		
+		<typeAlias alias="Inform" type="com.tsinghuadtv.www.entity.Inform"/>
+		<typeAlias alias="Model" type="com.tsinghuadtv.www.entity.Model"/>
+		
+		<typeAlias alias="Student" type="com.tsinghuadtv.www.entity.Student"/>
+		<typeAlias alias="School" type="com.tsinghuadtv.www.entity.School"/>
+		
+		<typeAlias alias="Ask" type="com.tsinghuadtv.www.entity.ask.Ask"/>
+		<typeAlias alias="AskQuestion" type="com.tsinghuadtv.www.entity.ask.AskQuestion"/>
+		<typeAlias alias="AskQuestionChoice" type="com.tsinghuadtv.www.entity.ask.AskQuestionChoice"/>
+		<typeAlias alias="UserAskQuestionAnswer" type="com.tsinghuadtv.www.entity.ask.UserAskQuestionAnswer"/>
+		
+		<typeAlias alias="EnergyLevel" type="com.tsinghuadtv.www.entity.energy.EnergyLevel"/>
+		<typeAlias alias="StudentEnergy" type="com.tsinghuadtv.www.entity.energy.StudentEnergy"/>
+		<typeAlias alias="SchoolEnergy" type="com.tsinghuadtv.www.entity.energy.SchoolEnergy"/>
+		
+		<typeAlias alias="Report" type="com.tsinghuadtv.www.entity.report.Report"/>
+		<typeAlias alias="ReportComment" type="com.tsinghuadtv.www.entity.report.ReportComment"/>
+		<typeAlias alias="ReportLike" type="com.tsinghuadtv.www.entity.report.ReportLike"/>
+		<typeAlias alias="ReportStatus" type="com.tsinghuadtv.www.entity.report.ReportStatus"/>
+		<typeAlias alias="ReportTopic" type="com.tsinghuadtv.www.entity.report.ReportTopic"/>
+		<typeAlias alias="ReportType" type="com.tsinghuadtv.www.entity.report.ReportType"/>
+		<typeAlias alias="ReportView" type="com.tsinghuadtv.www.entity.report.ReportView"/>
+		<typeAlias alias="UserFavoriteReport" type="com.tsinghuadtv.www.entity.report.UserFavoriteReport"/>
+		
+		<typeAlias alias="Task" type="com.tsinghuadtv.www.entity.task.Task"/>
+		<typeAlias alias="TaskType" type="com.tsinghuadtv.www.entity.task.TaskType"/>
+		<typeAlias alias="UserTask" type="com.tsinghuadtv.www.entity.task.UserTask"/>
+		
+	</typeAliases>
+</configuration>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENSO后台管理&middot;学校简介</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+    <link href="assets/css/table.css" rel="stylesheet">
+    <style>
+    select {width: 12em;}
+    #detail-show {height: 620px;}
+    @media (min-width: 768px) {
+      .modal-dialog {
+        width: 800px;
+        margin: 30px auto;
+      }
+    }
+    </style>
+    <!--[if lt IE 9]><script src="./assets/js/libs/html5shiv.js"></script><![endif]-->
+    <script src="assets/js/jquery.js"></script>
+</head>
+
+<body>
+
+<section id="container" >
+    <header class="header black-bg" id="js-header">
+        <script>$("#js-header").load("include/header.html");</script>
+    </header>
+    <aside>
+        <div id="sidebar" class="nav-collapse ">
+            <script>$("#sidebar").load("include/sidebar.html");</script>
+        </div>
+    </aside>
+
+    <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-panel">
+                        <h4 class="mb"><i class="fa fa-angle-right"></i>学校查询</h4>
+                        <!-- xhr error report -->
+                        <div id="js-alert" class="alert alert-danger" role="alert" style="display: none;"></div>
+                        <form id="form-query" class="form-inline" role="form">
+                            <div class="form-group">
+                                <label for="i-area">地区: </label>
+                                <select id="i-area" name="area" title="地区"></select>
+                            </div>
+                            <button id="js-query" type="button" class="btn btn-theme">查询</button>
+                        </form>                        
+                    </div>
+                </div><!-- /col-lg-12 END SECTION MIDDLE -->
+            </div><! --/row -->
+
+            <div class="row mt">
+                <div class="col-md-12">
+                    <div class="content-panel">
+                        <h4><i class="fa fa-angle-right"></i>学校列表</h4><hr>
+                        <!-- new button -->
+                        <a class="btn btn-theme" href="javascript:;" id="js-new"><i class="fa fa-plus"></i>新增学校</a>
+
+                        <table class="table table-striped table-advance table-hover">
+                            <thead>
+                            <tr>     
+                                <th><i class="fa fa-card-o">ID</i>                           
+                                <th><i class="fa fa-navicon"></i>学校名称</th>
+                                <th><i class="fa fa-area-chart"></i>地区</th>
+                                <th><i class="fa fa-picture-o"></i>校徽</th>                                                                
+                                <th><i class="fa fa-file-text-o"></i>学校简介</th>
+                                <th title="绝对路径或相对enso项目webapp根目录的路径"><i class="fa fa-user-o"></i>校长头像</th>
+                                <th><i class="fa fa-comment-o"></i>校长寄语</th>
+                                <th><i class="fa fa-edit"></i>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody id="js-list" class="content-list">
+                            <!-- 
+                            <tr data-id="37">
+                                <td>2</td>
+                                <td><a class="title" href="javascript:;">开封市五中</a></td>
+                                <td>开封</td>
+                                <td><div class="text"><p>开封市第五中学创建于1904年，原名开封府学堂，1956年始定名为开封市第五中学。 学校地处市中心，环境优美，师资力量雄厚，现有初中、高中共34个教学班，近2000名学生。历经一个世纪的发展与进步，学校逐步成为一座拥有现代实验设备，多媒体教室、语音室、高规格微机室、电子备课室，教学闭路广播系统等先进教学设备的实力雄厚的花园式中学。</p><p>改革开放以来，开封五中乘着十一届三中全会的春风，在历任书记和校长的正确领导下，继续发扬优良的教育传统，加大教学的改革力度，继续发扬“团结求实，拼搏进取”的校风，树立“以学生发展为本”的教育思想，使开封五中在开封教育战线上又一次崛起，得到了较快的发展壮大。如今，学校校园环境优美，师资队伍雄厚，教学质量一直在我市普通中学前列，高考率一年一个台阶，逐年上升，得到了上级和社会的广泛赞誉。2004年，学校顺利通过了开封市首批示范性高中的验收工作，被评为开封市首批五所示范性高中之一，这是五中发展史上又一个辉煌的里程碑.</p></div></td>
+                                <td>./publish/school/avatar/1.jpg</td>
+                                <td><div class="text">走进五中，走进百年老校，我希望每一位学生都能达成德业并重的目标追求，养成自由活泼的为学品格，培养谨严纯正的治学品格，塑造知行合一的践履理念，通过三年的学习，能够拥有自强不息、知行合一的人生境界。开封五中是一所始建于1828年彝山书院的百年老校，希望同学们能够感受学校悠久的文化积淀，实现自己的人生梦想。</div></td>
+                                <td><button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></td>
+                            </tr>
+                             -->
+                            </tbody>
+                        </table>
+                    </div><!-- /content-panel -->
+
+                </div><!-- /col-md-12 -->
+            </div>
+        </section>
+    </section>
+    <!--main content end-->
+</section>
+
+<!-- 新增学校 -->
+<div id="newModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"><i class="fa fa-plus"></i>新增学校</h4>
+            </div>
+            <div class="modal-body">
+            
+                <div id="newAlertDanger" class="alert alert-danger" role="alert" style="display: none;">...</div>
+                <div id="newAlertSuccess" class="alert alert-success" role="alert" style="display: none;">...</div>
+                       
+                <form id="form-new" class="form-horizontal" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="new-title" class="col-sm-2 control-label">学校名称</label>
+                        <div class="col-sm-10">
+                            <input id="new-title" name="title" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-pinyin" class="col-sm-2 control-label">校名拼音</label>
+                        <div class="col-sm-10">
+                            <input id="new-pinyin" name="pinyin" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-area" class="col-sm-2 control-label">所属地区</label>
+                        <div class="col-sm-10">
+                            <select id="new-area" name="area" title="选择课程所属学校" class="form-control"></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-logo" class="col-sm-2 control-label">校徽图片</label>
+                        <div class="col-sm-10">                            
+                            <label for="new-logo" class="btn btn-primary">上传图片</label>
+                            <input id="new-logo" type="file" name="logo" title="课程图片" class="hide">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-content" class="col-sm-2 control-label">学校简介</label>
+                        <div class="col-sm-10">
+                            <textarea id="new-content" name="content" title="学校简介" class="form-control" cols="3"></textarea>                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-avatar" class="col-sm-2 control-label">校长头像</label>
+                        <div class="col-sm-10">                            
+                            <label for="new-avatar" class="btn btn-primary">上传图片</label>
+                            <input id="new-avatar" type="file" name="avatar" title="课程图片" class="hide">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="new-words" class="col-sm-2 control-label">校长寄语</label>
+                        <div class="col-sm-10">
+                            <textarea id="new-words" name="words" class="form-control" cols="3"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="js-add">确认添加</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 详情显示 -->
+<div id="myModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title"><i class="fa fa-eye"></i>视频详情</h4>
+            </div>
+            <div class="modal-body">
+                <dl class="detail" id="detail-show"></dl>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<!-- 详情编辑 -->
+  <div id="editModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title"><i class="fa fa-pencil"></i>学校编辑</h4>
+        </div>
+        <div class="modal-body">
+        
+          <div id="editAlertDanger" class="alert alert-danger" role="alert" style="display: none;">...</div>
+          <div id="editAlertSuccess" class="alert alert-success" role="alert" style="display: none;">...</div>
+          
+          <form id="form-edit" class="form-horizontal" method="POST">
+            <input type="hidden" id="edit-id" value="" name="id" />
+            <div class="form-group">
+              <label for="edit-title" class="col-sm-2 control-label">学校名称</label>
+              <div class="col-sm-10">
+                <input id="edit-title" name="title" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="edit-pinyin" class="col-sm-2 control-label">校名拼音</label>
+              <div class="col-sm-10">
+                <input id="edit-pinyin" name="pinyin" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="edit-area" class="col-sm-2 control-label">所属地区</label>
+              <div class="col-sm-10">
+                <select id="edit-area" name="area" title="选择课程所属学校" class="form-control"></select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="edit-logo" class="col-sm-2 control-label">校徽图片</label>
+              <div class="col-sm-10">                
+                <label for="edit-logo" class="btn btn-primary">上传图片</label>
+                <input id="edit-logo" type="file" name="logo" title="校徽图片" class="hide">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="edit-content" class="col-sm-2 control-label">学校简介</label>
+              <div class="col-sm-10">
+                <textarea id="edit-content" name="content" title="学校简介" class="form-control" cols="5"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="edit-avatar" class="col-sm-2 control-label">校长头像</label>
+              <div class="col-sm-10">                
+                <label for="edit-avatar" class="btn btn-primary">上传图片</label>
+                <input id="edit-avatar" type="file" name="avatar" title="校长头像" class="hide">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="edit-words" class="col-sm-2 control-label">校长寄语</label>
+              <div class="col-sm-10">
+                <textarea id="edit-words" name="words" class="form-control" cols="5"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary" id="submit-edit">确定</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+
+  <!-- js placed at the end of the document so the pages load faster -->
+<script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+<script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+<!--common script for all pages-->
+<script src="assets/js/common-scripts.js"></script>
+<script src="assets/js/school.js"></script>
+</body>
+</html>

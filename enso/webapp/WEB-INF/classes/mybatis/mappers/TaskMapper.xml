@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsinghuadtv.www.mapper.TaskMapper">
+
+	<resultMap id="taskResult" type="Task">
+		<id property="id" column="task_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="title" column="task_title" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="beginDate" column="task_begin_date" jdbcType="DATE" javaType="java.util.Date"/>
+		<result property="endDate" column="task_end_date" jdbcType="DATE" javaType="java.util.Date"/>
+		<result property="open" column="task_is_open" jdbcType="CHAR" javaType="Bool"/>
+		<result property="energy" column="task_energy" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="topic" column="task_topic" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="finishCount" column="task_finish_count" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="createTime" column="task_create_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+		<result property="type" column="task_type_id" javaType="TaskType" typeHandler="EnumIdTypeHandler"/>
+	</resultMap>
+	
+	<resultMap id="userTaskResult" type="UserTask">
+		<id property="id" column="user_task_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="currentCount" column="user_task_current_count" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="finishTime" column="user_task_finish_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+		<result property="finished" column="user_task_is_finished" jdbcType="CHAR" javaType="Bool"/>
+		<result property="userNumber" column="user_task_user_number" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="taskId" column="user_task_task_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		
+		<association property="task" javaType="Task" resultMap="taskResult" />
+	</resultMap>
+    
+    <sql id="taskColumns">
+    	tt.id AS task_id,
+    	tt.title AS task_title,
+    	tt.begin_date AS task_begin_date,
+    	tt.end_date AS task_end_date,
+    	tt.is_open AS task_is_open,
+    	tt.energy AS task_energy,
+    	tt.topic AS task_topic,
+    	tt.finish_count AS task_finish_count,
+    	tt.create_time AS task_create_time,
+    	tt.type_id AS task_type_id
+    </sql>
+    
+    <sql id="userTaskColumns">
+    	tut.id AS user_task_id,
+    	tut.current_count AS user_task_current_count,
+    	tut.finish_time AS user_task_finish_time,
+    	tut.is_finished AS user_task_is_finished,
+    	tut.user_number AS user_task_user_number,
+    	tut.task_id AS user_task_task_id    	
+    </sql>
+    
+    <select id="selectTaskByFilter" parameterType="map" resultMap="taskResult">
+    	SELECT
+    		<include refid="taskColumns" />
+    	FROM
+    		t_task tt
+    	<where>
+    		<if test="filter.date != null">
+    			AND tt.begin_date <![CDATA[<=]]> #{filter.date} AND tt.end_date <![CDATA[>=]]> #{filter.date}
+    		</if>
+    		<if test="filter.open != null">
+    			AND tt.is_open = #{filter.open.code}
+    		</if>
+    		<if test="filter.excludeIds != null and filter.excludeIds.size > 0">
+    			AND tt.id NOT IN 
+    			<foreach item="taskId" index="index" collection="filter.excludeIds"
+						 open="(" separator="," close=")">
+					#{taskId, javaType=int, jdbcType=INTEGER}
+				</foreach>
+    		</if>
+    		<if test="filter.type != null">
+    			AND tt.type_id = #{filter.type.id}
+    		</if>
+    		<if test="filter.inProgess == true">
+    			AND NOT EXISTS (SELECT 1 FROM t_user_task tut WHERE 
+    				tut.user_number = #{filter.userNumber} AND tut.task_id = tt.id AND tut.is_finished = 'Y')
+    		</if>
+    	</where>
+    </select>
+    
+    <select id="selectUserTaskByFilter" parameterType="map" resultMap="userTaskResult">
+    	SELECT
+    		<include refid="userTaskColumns" />,
+    		<include refid="taskColumns" />
+    	FROM
+    		t_user_task tut
+    		INNER JOIN t_task tt ON tt.id = tut.task_id
+    	<where>
+    		<if test="filter.userNumber != null">
+    			AND tut.user_number = #{filter.userNumber}
+    		</if>
+    		<if test="filter.taskId != null">
+    			AND tut.task_id = #{filter.taskId}
+    		</if>
+    		<if test="filter.finished != null">
+    			AND tut.is_finished = #{filter.finished.code}
+    		</if>    		
+    	</where>
+    </select>
+    
+    <insert id="insertUserTask" parameterType="UserTask">
+    	INSERT INTO t_user_task (
+    		current_count,
+    		finish_time,
+    		is_finished,
+    		user_number,
+    		task_id
+    	) VALUES (
+    		#{currentCount},
+    		#{finishTime},
+    		#{finished.code},
+    		#{userNumber},
+    		#{taskId}
+    	)
+    </insert>
+    
+    <update id="updateUserTask" parameterType="UserTask">
+    	UPDATE 
+    		t_user_task
+    	<set>
+    		<if test="currentCount != null">
+    			current_count = #{currentCount},
+    		</if>
+    		<if test="finishTime != null">
+    			finish_time = #{finishTime},
+    		</if>
+    		<if test="finished != null">
+    			is_finished = #{finished.code},
+    		</if>
+    	</set>
+    	WHERE
+    		id = #{id}
+    </update>
+    
+</mapper>

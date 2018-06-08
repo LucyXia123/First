@@ -1,0 +1,257 @@
+.html {
+    font-size: 65%;
+}
+
+.w{
+    width: 1200px;
+    margin: 0 auto;
+
+
+}
+.l_line {
+	width:40%;
+	height:1px;
+	color:#ccc;
+	background-color: #ccc;
+	position: absolute;
+    left: 0;
+    top: 70;
+
+}
+.r_line {
+	width:40%;
+	height:1px;
+	color:#ccc;
+	background-color: #ccc;
+	position: absolute;
+    left: 702px;
+    top: 70;
+
+}
+.h_juz {
+	text-align: center;
+}
+.myfont {
+	   font-size: 2rem;
+}
+.now {
+	color:blue;
+}
+.now1{
+	color:yellow;
+	
+}
+.mycolor {
+    background-color: pink;
+}
+.f {
+    float: left;
+}
+.r {
+    float: right;
+}
+ul li {
+    list-style: none;
+}
+.myschool-top {
+	width:100%;
+	height: 30px;
+	border-right: 1px solid   #ccc;
+	border-top: 1px solid  #ccc;
+	border-left:  1px solid   #ccc;
+	position: absolute;
+    left:0px;
+    top:40px;
+    	margin-top:6px;
+     
+    
+}
+.myschool {
+	width:80px;
+	height: 30px;
+	position: absolute;
+    left: 542px;
+    top:56px;
+    font-size: 2rem;
+}
+.schoolName {
+    height: 100px;
+    padding: 35px;
+    font-size: 2rem;
+
+}
+.schoolName span img ,.schoolName img{
+	margin-right:20px;
+}
+.schoolDesc {
+    height: 100px;
+}
+.dl_first{
+	height: 80px;
+	
+}
+.dl_last{
+	height: 120px;
+	
+}
+.schoolEnegery {
+    height: 200px;
+    padding: 10px;
+    font-size: 2rem;
+}
+.schoolEnegery .ontheProgress{
+		margin-left:20px;
+}
+.schoolEnegery .ontheProgress > li {
+	
+	margin-right:100px;
+	width:20px;
+	height:20px;
+}
+.paiming {
+	text-align: center;
+}
+.paiming span {
+	display:block;
+}
+
+/*页签导航  */
+.ly_title {
+    width: 65%;
+    height: 50px;
+    background-color: rgba(0,0,0,0.05);
+    margin: 10px auto;
+    line-height: 50px;
+
+}
+.ly_title span {
+    font-size: 1.5rem;
+    margin-right: -6px;
+    margin-left: 20px;
+}
+/*任务栏区*/
+.dl_task {
+    height: 100px;
+    line-height: 40px;
+    text-align: center;
+   
+}
+.dl_task a{
+    padding-left: 55px;
+    
+
+}
+.dl_task .row .col-lg-12 {
+    background-color: #cccccc;
+     margin:5px 0px;
+    padding:0px 0px;
+}
+.teacherTips {
+	 height:70px;
+
+	 font-size: 2rem;
+	 color:black;
+	  
+	 
+}
+.teacherTips .col-lg-12 {
+	   padding:0px;
+}
+.dl_energyBang  {
+	  margin-top: 30px;
+     position: relative;
+	
+}
+.dl_teacher img{
+    height: 150px;
+}
+.teacherInfo {
+	height:50px;
+	line-height: 50px;
+}
+/*学校排名  */ 
+.dl_energyBang .dl_energyrow{
+	height:100px;
+	line-height:100px;
+	padding:30px 0;
+	border-right: 1px   #ccc;
+	border-bottom: 1px  #ccc;
+	border-left:  1px  #ccc;
+	border-style:solid; 
+
+}
+.schoolPaimimg span{
+	width:50px;
+	height:50px;
+	line-height: 50px;
+	font-size: 2rem;
+	color:black;
+	margin-left: 30px;
+	
+}
+.schoolIntro {
+	
+	height:50px;
+	line-height: 50px;
+}
+ .schoolIntro span  {
+	
+	font-size: 14px;
+	color:black;
+	display: block;
+
+}
+.schoolIntroText {
+    width:100px;
+	height:50px;
+	line-height: 20px;
+    margin:5 px 0;
+	
+}
+.schoolIntro img {
+	margin-right: 10px;
+		
+	height:50px;
+}
+.progress {
+	border-radius: 50px;
+	
+}
+ .progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000;
+    text-align: center;
+    background-color: #ccc;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+    border-radius: 50px;
+   
+}
+.bangValue {
+	 height: 100%;
+	 margin-top:15px;
+     padding-left:75px; 
+}
+#energy_pic a {
+	display:block;
+	width:50px;
+	height:50px;
+	 text-align: center;
+	line-height: 50px;
+	/* padding-left:15px; */
+}
+#energy_pic ul {
+	padding-left:25px; 
+}
+
+#energy_pic ul>li >img{
+	margin-right: 20px;
+}
+ */

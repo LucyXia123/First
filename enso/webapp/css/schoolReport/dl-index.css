@@ -1,0 +1,222 @@
+ .w {
+    height: 1980px;
+   /*  background-color: #ccc; */ 
+    border: 1px #797979 solid;
+} 
+
+.header {
+    height: 63px;
+    /* background-color: skyblue; */
+    border-bottom: #797979 1px solid;
+}
+
+
+.banner {
+    height: 50px;
+    line-height:50px;
+    background-color: #f2f2f2;
+    margin-top: 10px;
+    
+}
+
+.banner ul {
+    padding-left: 15px;
+}
+
+.banner li {
+    line-height: 50px;
+    font-size:18px;
+}
+
+.school {
+    height: 500px;
+    border: 1px solid #797979;
+    margin-top: 10px;
+    position:relative;
+}
+
+.school .hlg {
+    padding: 28px 0 0 35px;
+}
+
+.school_logo1 {
+    width: 70px;
+    height: 57px;
+   
+}
+
+.school h2 {
+    font: 400 25px 'microsoft yahei';
+    padding-left: 10px;
+}
+
+.sign {
+    width: 50px;
+    height: 50px;
+  
+}
+.sign img {
+	 width: 50px;
+    height: 50px;
+}
+.huahua {
+    padding: 32px 23px 0 23px;
+}
+
+.huahua h4 {
+    font: 400 18px/50px 'microsoft yahei';
+    padding-left: 20px;
+}
+.school > p {
+    display: block;
+    font: 18px/20px 'microsoft yahei';
+    padding: 15px 35px;
+    height:100px;
+}
+/* 点亮进度条的文本 值*/
+.dl_text {
+	width:900px;
+	height:50px;
+	margin-left:300px;
+	/* background-color:pink; */
+	
+	
+}
+.dl_text li {
+	text-align:center;
+    float:left; 
+	margin-right:150px;
+	font-size:1.6rem;
+}
+.dl_text li p:last-of-type  {
+ color: orangered;
+	
+}
+/*竖线部分  */
+ .dl_liner {
+    width:900px;
+	height:50px;
+	margin-left:332px;
+	/* background-color:pink; */
+    float:left; 
+    margin-top:5px;
+ }
+  .dl_liner li {
+  width:40px;
+  height:50px;
+  margin-right:175px;
+  border-left:2px solid #808080;
+  z-index:111;
+ 
+  }
+/* /*进度条*/
+.progressBox {
+	 width:1000px;
+	 height:20px;
+	/*  background-color:pink;  */
+	 position: absolute;
+    left:70px;
+    top:270px;
+    line-height:30px;
+    border-riradius: 3px;
+    overflow: hidden;
+    background:rgba(0,0,0,.1);
+    cursor: pointer;
+}
+
+
+.progressBox  .loaded {
+    width: 0;
+    height: 100%;
+    background-color: #999;
+}
+
+.progressBox  .line {
+    width: 0;
+    height: 100%;
+    background-color: #FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.progressBox  .bar {
+    width: 45%;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+   /*  z-index: 11111;  */
+    background-color :orangered;
+     border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+} 
+.energyTips {
+	font-size:1.5rem;
+	position: absolute;
+    left:70px;
+    top:230px;
+    color: brown;
+}
+/*  做任务得能量区*/
+.dl_currentask {
+    width: 1200px;
+    height: 60px;
+    background-color: rgba(0,0,0,0.05);
+}
+.dl_currentask .rec-l {
+    padding-left: 30px;
+}
+.dl_currentask .rec-l a {
+    margin: 0 15px;
+    font-size: 14px;
+    color: #00a1d6;}
+
+.dl_currentask strong {
+    color: #01A039;
+    margin: 10px ;
+
+}
+/* 做任务得能量区结束 */
+.teacher {
+    height: 401px;
+    border: 1px solid #797979;
+    margin-top: 10px;
+}
+.teacher > .bor {
+    display: block;
+    height: 45px;
+    margin: 0 35px;
+    border-bottom: 1px solid #797979;
+}
+/* 学校榜模块 */
+.schoolBang {
+	height:600px;
+	width:100%;
+	background-color: #cccccc;
+}
+.schoolBang .schoolBang  {
+	height:50px;
+	width:100%;
+	padding:20px;
+}
+.footer {
+
+    margin-top: 20px;
+    margin-left: 35px;
+    border-top: 1px solid #797979;
+}
+.footer .last {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.footer_pic {
+    width: 255px;
+    height: 15px;
+    margin-top: 35px;
+    margin-left: 90px;
+    background: url(./images/sr_station/rd.png) -20px 600px;
+}
+.footer .jl {
+    margin-left: 95px;
+}

@@ -1,0 +1,462 @@
+/* 活动报名 */
+.act-wrapper {
+    padding: 30px 0 30px;   
+    font-family: "Microsoft Yahei", sans-serif;    
+    min-width: 400px;
+    margin: 0 auto;
+    clear: both;
+}
+
+@media (min-width: 1200px) {
+  /*
+  .act-wrapper {
+    width: 80%;
+  }
+  */
+}
+
+.act-title {
+    padding-bottom: 30px;
+    color: #333;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;    
+}
+
+.act-label {
+  text-align: left;
+  font-size: 16px;
+  color: #555;
+  display: none;
+}
+
+.act-info {
+  padding: 20px 0;
+  color: #666;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.enroll h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.enroll .img-wrapper {
+  margin: 20px auto;  
+  height: 110px;
+  position: relative;
+}
+
+.enroll .img-wrapper > div {
+  margin: 0 auto;
+  position: relative;
+  height: 80px;
+}
+
+.enroll .img-wrapper > div > img {
+    position: absolute;
+    left: 50%;
+    margin-left: -47px;
+    width: 94px;
+    max-height: 100px;
+    margin-top: -20px;
+}
+
+.enroll .img-wrapper .upload-trigger {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2em;
+    font-size: 16px;
+}
+
+.enroll .props {
+    width: 50%;
+    margin: 0 auto;
+    min-width: 400px;
+}
+
+.enroll .props label {
+    font-size: 16px;
+    margin-right: 20px;
+    width: 70px;
+    color: #2b2b2b;
+}
+
+.enroll .props .form-control {
+   display: inline-block;
+   float: right;   
+   width: 310px;
+}
+
+.enroll .props .form-control:after {
+  clear: both; 
+}
+
+.enroll .props span {
+  font-size: 16px;
+  color: #2b2b2b;
+}
+
+.enroll > form > button {
+    margin: 0 auto;
+    display: block;
+}
+
+#myModal > .modal-dialog > .modal-content > .modal-body {
+    width: 600px;
+    height: 320px;
+    margin-top: 10px;
+}
+
+#myModal .card-canvas,  #myModal .card-metas {
+  float: left;
+}
+
+#myModal .card-canvas {
+  width: 280px;
+  height: 280px;
+  border: 1px solid #ccc;
+  background-color: #555;
+}
+
+#myModal .card-metas {
+  height: 280px;
+  width: 280px;
+  text-align: center;
+}
+
+#myModal .card-metas p {
+  font-size: 16px;
+  color: #6b6b6b;
+  font-weight: 500;
+  font-family: "Microsoft Yahei", sans-serif;
+  line-height: 30px;
+}
+
+#myModal .card-metas .title {
+  font-size: 35px;
+  font-weight: 600; 
+  color: #262626;
+  margin: 30px 0;
+}
+
+#myModal .card-metas .title .slogan {
+  max-width: 300px;
+  font-size: 28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+#myModal .card-metas > span {
+  font-size: 24px;
+  color: #262626;
+}
+
+/* 作品上传 */
+#upload {
+  width: 100%;
+  height: 160px;
+  /* background-color: #E8F2FE; */
+  position: relative;
+}
+
+#upload .enroll-metas {
+  position: absolute;
+  top: 30px;
+  left: 160px;
+}
+
+#upload .avatar {
+  position: absolute;
+  top: 30px;
+  left: 40px;  
+  max-width: 100px;
+  max-height: 100px;
+}
+
+#upload .enroll-metas .user-info > p {
+  margin-right: 8px;
+  display: inline-block;
+}
+
+#upload .enroll-metas .user-info > .btn {
+  padding: 2px 4px;
+  border-radius: 0;
+  background-color: #f2f2f2;
+}
+
+#upload .enroll-metas .user-buttons {
+  margin-top: 10px;
+}
+
+#upload .enroll-metas .user-buttons > .btn {
+  margin-right: 10px;
+}
+
+#works {
+  min-height: 400px;
+  padding-bottom: 20px;
+}
+
+#works > .card {
+  width: 25%;
+  height: 220px;
+  /* background: #DBD4D8; */  
+  padding: 10px;
+  display: inline-block;
+  float: left;
+}
+
+#works .card .imgwrap {
+  height: 100px;
+  padding-bottom: 10px;
+}
+
+#works .card .imgwrap img {
+    margin: 0 auto;
+    display: block;
+    max-height: 100px;
+    height: auto;   
+}
+
+#works .card .figure {
+  line-height: 30px;
+}
+
+#works .card .figure p {
+  font-size: 12px;
+}
+
+#works .card .figure .tutor > .pull-right {
+  margin-right: 6px;
+}
+
+#works .card .figure .sns > * {
+  display: inline-block;
+  float: left;
+}
+
+#works .card .figure .sns > .num {
+  margin-right: 10px;
+}
+
+#works .card .figure .sns > .thumb {
+  width: 20%;
+}
+
+#works .card .figure .sns > .credit, #works .card .figure .sns > .check {
+  width: 40%;
+  text-align: right;
+}
+
+#J_user_upload >div.user {
+    width: 100%;
+    display: block;
+    height: 160px;
+}
+
+#J_user_upload >div.user:after {
+    clear: both;
+}
+
+#J_user_upload >div.user .avatar {
+    width: 150px;
+    max-height: 150px;
+    height: auto;
+    float: left;
+}
+
+#J_user_upload >div.user .metas {
+    display: inline-block;
+    margin-left: 20px;
+    float: left;
+}
+
+#J_user_upload >div.user .metas > h4 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 10px;  
+}
+
+#J_user_upload >div.user .metas > div {
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+#J_user_upload >div.up_alt {
+  height: 140px;
+}
+
+#J_user_upload >div.up_alt > .alt {
+  width: 30%;
+  margin-right: 4%;
+  display: inline-block;
+  height: 120px;
+  background: #dadada;
+  position: relative;
+  float: left;
+}
+
+#J_user_upload >div.up_alt > .alt.last {
+  margin-right: 0;
+}
+
+#J_user_upload >div.up_alt > .alt > span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -1.5em;
+    margin-top: -.5em;
+    font-size: 20px;
+}
+
+#J_user_upload > .up_wrap {
+  padding: 10px 0;
+}
+
+#J_user_upload > .up_wrap > .btn {
+    margin: 0 auto;
+    display: block;
+}
+
+#J_title {
+    padding: 0;
+    line-height: 20px;
+}
+
+#J_file_upload {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#J_file_upload input {
+  display: none;
+}
+
+#fbModal .modal-body h2 {
+  padding: 20px 20px 0;
+}
+
+#fbModal .modal-footer {
+  border-top: none;
+}
+
+#fbModal .modal-footer .btn {
+    margin: 0 auto;
+    display: block;
+}
+
+#act-view > .user {
+    width: 100%;
+    display: block;
+    height: 180px;
+}
+
+#act-view > .user .avatar {
+    height: 160px;
+    float: left;
+    min-width: 160px;
+    width: auto;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+}
+
+#act-view > .user .metas {
+    float: left;
+    margin-left: 30px;
+    line-height: 40px;
+}
+
+#act-view > .user .metas h4 {
+  font-size: 36px;
+  color: #5c5c5c;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+#act-view > .user .metas > div {
+  font-size: 16px;
+  color: #727272;
+  line-height: 32px;
+}
+
+#act-view > .user .metas > .sns .num {
+  margin: 0 20px 0 4px;
+  display: inline-block;
+}
+
+#act-view > article > p {
+    font-size: 14px;
+    color: #333;
+    line-height: 22px;
+    margin: 0 0 14px 0;
+    text-indent: 2em;
+}
+
+#act-view > .thumb-up {
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+#act-view > .thumb-up h4 {
+    display: inline-block;
+    float: right;
+    line-height: 200px;
+    margin-right: 40px;
+    font-size: 24px;
+    color: #2b2b2b;
+}
+#qrcode {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    float: right;
+}
+
+#J_article {
+/*  border-top: 1px solid #ccc; */
+  margin-top: 20px;
+  min-height: 200px;
+  height: auto;
+  overflow-y: hidden;
+}
+
+#J_article > iframe {
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+    margin-bottom: 10px;
+/*    border: 1px solid #ccc; */
+}
+
+#J_article > ul > li {
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+#J_loading {
+  z-index: 3;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  display: none;
+}
+
+.page_num {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    margin-left: -20px;
+}

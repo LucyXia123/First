@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsinghuadtv.www.mapper.EnergyMapper">
+
+	<resultMap id="schoolResult" 
+		extends="com.tsinghuadtv.www.mapper.SchoolMapper.schoolResult" type="School"/>
+	
+	<resultMap id="energyLevelResult" type="EnergyLevel">
+		<id property="id" column="energy_level_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="level" column="energy_level_level" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="energy" column="energy_level_energy" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="name" column="energy_level_name" jdbcType="VARCHAR" javaType="java.lang.String"/>
+	</resultMap>
+	
+	<resultMap id="studentEnergyResult" type="StudentEnergy">
+		<id property="id" column="student_energy_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="energy" column="student_energy_energy" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="updateTime" column="student_energy_update_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+		<result property="userNumber" column="student_energy_user_number" jdbcType="VARCHAR" javaType="java.lang.String"/>
+	</resultMap>
+	
+	<resultMap id="schoolEnergyResult" type="SchoolEnergy">
+		<id property="id" column="school_energy_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="energy" column="school_energy_energy" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="energyRank" column="school_energy_energy_rank" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="updateTime" column="school_energy_update_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+		<result property="schoolName" column="school_energy_school_name" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		
+		<association property="school" javaType="School" resultMap="schoolResult"/>
+	</resultMap>
+	
+	<sql id="schoolColumns">
+		<include refid="com.tsinghuadtv.www.mapper.SchoolMapper.schoolColumns" />
+	</sql>
+	
+    <sql id="energyLevelColumns">
+    	tel.id AS energy_level_id,
+    	tel.level AS energy_level_level,
+    	tel.energy AS energy_level_energy,
+    	tel.name AS energy_level_name
+    </sql>
+    
+    <sql id="studentEnergyColumns">
+    	stue.id AS student_energy_id,
+    	stue.energy AS student_energy_energy,
+    	stue.update_time AS student_energy_update_time,
+    	stue.user_number AS student_energy_user_number
+    </sql>
+    
+    <sql id="schoolEnergyColumns">
+    	tse.id AS school_energy_id,
+    	tse.energy AS school_energy_energy,
+    	tse.energy_rank AS school_energy_energy_rank,
+    	tse.update_time AS school_energy_update_time,
+    	tse.school_name AS school_energy_school_name
+    </sql>
+        
+    <select id="selectAllEnergyLevels" parameterType="map" resultMap="energyLevelResult">
+    	SELECT
+    		<include refid="energyLevelColumns" />
+    	FROM
+    		t_energy_level tel
+    	ORDER BY
+    		tel.level
+    </select>
+    
+    <select id="selectEnergyLevelByLevel" parameterType="map" resultMap="energyLevelResult">
+    	SELECT
+    		<include refid="energyLevelColumns" />
+    	FROM
+    		t_energy_level tel
+    	WHERE
+    		tel.level = #{level}
+    </select>
+    
+    <select id="selectStudentEnergyByUserNumber" parameterType="map" resultMap="studentEnergyResult">
+    	SELECT
+    		<include refid="studentEnergyColumns" />
+    	FROM
+    		t_student_energy stue
+    	WHERE
+    		stue.user_number = #{userNumber}
+    </select>
+    
+    <insert id="insertStudentEnergy" parameterType="StudentEnergy">
+    	INSERT INTO t_student_energy (
+    		`energy`,
+  			`update_time`,
+  			`user_number`
+    	) VALUES (
+    		#{energy},
+    		NOW(),
+    		#{userNumber}    		
+    	)
+    </insert>
+    
+    <insert id="increaseStudentEnergy" parameterType="map">
+    	UPDATE
+    		t_student_energy
+    	SET
+    		energy = energy + #{energy}
+    	WHERE
+    		user_number = #{userNumber}
+    </insert>
+    
+    <select id="selectSchoolEnergyBySchoolName" parameterType="map" resultMap="schoolEnergyResult">
+    	SELECT
+    		<include refid="schoolEnergyColumns" />,
+    		<include refid="schoolColumns" />
+    	FROM
+    		t_school_energy tse
+    		LEFT JOIN t_school schl ON schl.title = tse.school_name
+    	WHERE
+    		tse.school_name = #{schoolName}
+    </select>
+    
+    <insert id="insertSchoolEnergy" parameterType="SchoolEnergy">
+    	INSERT INTO t_school_energy (
+    		`energy`,
+  			`energy_rank`,
+  			`update_time`,
+  			`school_name`
+    	) VALUES (
+    		#{energy},
+    		#{energyRank},
+    		NOW(),
+    		#{schoolName}    		
+    	)
+    </insert>
+    
+    <update id="updateSchoolEnergy" parameterType="map">
+    	UPDATE 
+    		t_school_energy
+    	SET 
+    		update_time = NOW(),  
+    		energy = IFNULL((SELECT SUM(tse.energy) FROM t_student_energy tse INNER JOIN t_student stu ON stu.USERNUMBER = tse.user_number
+    			WHERE stu.SCHOOL = #{schoolName}), 0)
+    	WHERE
+    		school_name = #{schoolName}
+    </update>
+    
+    <update id="updateSchoolEnergyRank" statementType="CALLABLE" parameterType="map">
+    	CALL update_school_energy_rank()
+  	</update>
+    
+</mapper>

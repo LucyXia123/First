@@ -1,0 +1,6 @@
+<mapper>
+    <filter name="com.tsinghuadtv.www.model.filter.report.ReportFilter">
+		<property name="viewCount" column="tr.view_count" />	
+		<property name="commentCount" column="tr.comment_count" />
+	</filter>
+</mapper>

@@ -1,0 +1,171 @@
+body > nav.navbar {
+   background-color: #f5f5f5;
+}
+
+#news {
+  background-color: #fff;  
+}
+#news .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.breadcrumb li {
+    font-size: 16px;
+    color: #999;
+    line-height: 14px;
+    margin-left: -2px;
+}
+
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: ">";
+}
+
+.breadcrumb>.active {
+    color: #5dcd88;
+}
+
+.article-header {
+  position: relative;
+  height: 100px;
+}
+
+.article-header h1 {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    text-align: center;
+}
+
+.article-metas {
+    padding: 20px 0;
+    text-align: center;
+    width: auto;
+    display: inline-block;
+    overflow-x: visible;
+    white-space: nowrap;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -170px;
+}
+
+.article-metas:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.article-metas > div, .article-metas > span {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+
+.article-metas > div:last-child {
+  margin-right: 0;
+}
+
+.article-body {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.article-body article p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 1.8em;
+  zoom: 1.1;
+  text-indent: 2em;
+}
+
+.article-body article a {
+  color: #337ab7;
+}
+
+.article-body h1, .article-body h2 {
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft YaHei,黑体;
+    font-weight: normal;
+}
+
+.article-body h2 {
+    font-size: 16px;
+}
+
+.separate-line {
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  margin: 10px 0;
+  z-index: 1;
+}
+
+.separate-line .highlight {
+  background-color: #c72115;
+  z-index: 2;
+  width: 130px;
+  height: 2px;
+}
+
+.related-header {
+  position: relative;
+}
+
+.related-header .more {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.related-body {
+  min-height: 150px;
+  height: auto;
+}
+
+.related-body ul.related-titles > li {
+    list-style-type: disc;
+    height: 40px;
+    line-height: 40px;
+    width: 50%;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.related-body ul.related-titles > li:before {
+    content: ".";
+    color: #181818;
+    font-weight: 800;
+    padding: 0 .2em;
+    zoom: 1.5;
+    vertical-align: text-bottom;
+    display: inline-block;
+    margin-bottom: -3px;
+}
+
+.related-body ul.related-titles > li > a {
+    color: #555;
+    font-size: 16px;
+}
+
+.container > .related {  
+  height: 200px;
+} 
+
+.pt {
+    min-width: 360px;
+    width: 360px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.article-body > div {
+   clear: both;
+}

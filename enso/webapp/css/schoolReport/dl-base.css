@@ -1,0 +1,42 @@
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+input,
+textarea,
+button {
+    outline: 0;
+    border: 0;
+}
+
+.w {
+    width: 1200px;
+    height: 1670px;
+    margin: 40px auto;
+    
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}

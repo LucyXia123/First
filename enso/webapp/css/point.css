@@ -1,0 +1,234 @@
+body, button, input, select, textarea {
+    font: 12px/1.5 tahoma,arial,"\5b8b\4f53";
+    -ms-overflow-style: scrollbar;
+}
+
+.main-wrapper {
+  height: 400px;
+  display: block;
+}
+
+#pointContent .panel .panel-body {
+  padding: 0;
+}
+
+#pointContent .notice {
+  border: 1px solid #f1f1f1;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 8px 8px 0;
+  padding: 8px 10px;
+  color: #797979;
+  vertical-align: top;
+}
+
+#pointContent .notice img {
+   vertical-align: baseline;
+}
+
+#pointContent .content {
+  padding: 8px 8px 30px;
+  background: #fff;
+  border-top: 0;
+}
+
+#pointContent .summary {
+  padding: 28px 0;
+  border: 2px solid #e2e2e2;
+  background-color: #f1f1f1;
+}
+
+#pointContent .summary .item {
+  float: left;
+  height: 100px;
+  border-right: 1px solid #e2e2e2;
+}
+
+#pointContent .summary .valid {
+  /* width: 265px; */
+  width: 350px;
+  border-left: 0;
+}
+
+#pointContent .summary .expired-soon {
+    width: 275px;
+}
+
+#pointContent .summary .exchange {
+  width: 330px;
+  border-right: 0;
+}
+
+#pointContent .summary span {
+  display: block;
+  text-indent: 60px;
+  text-align: left;
+}
+
+#pointContent .summary .desc {
+  font-size: 18px;
+  font-weight: 700; 
+  height: 24px;
+  line-height: 24px;
+}
+
+#pointContent .summary .valid .desc {
+  color: #666;
+}
+
+#pointContent .summary .point {
+  font-size: 34px;
+  font-weight: 700;
+  color: #288c29;
+  height: 40px;
+  line-height: 40px;
+}
+
+#pointContent .summary .date {
+    font-size: 12px;
+    color: #999;
+    line-height: 24px;
+}
+
+#pointContent .summary .expired-soon span {
+  color: rgb(153, 153, 153);
+}
+
+#pointContent .summary .exchange a {
+  display: block;
+  width: 260px;
+  height: 44px;
+  line-height: 44px;
+  margin: 28px auto;
+  background: #d83c59;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#pointContent .summary .exchange a:hover {
+  text-align: center;
+}
+
+#pointContent .detail .item-list {
+  margin-top: 12px;
+  border-top: 1px solid #f1f1f1;
+}
+
+#pointContent .content .error {
+  background: #f1f1f1;
+  border: 2px solid #e2e2e2;
+  margin: 28px 0;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#pointContent .pager {
+  margin-top: 0;
+}
+
+#pointContent .detail {
+    margin-top: 28px;
+}
+
+#pointContent .detail .masthead {
+    background-color: #f1f1f1;
+    border-width: 1px 0;
+    border-color: #e3e3e3;
+    border-style: solid;
+    color: #999;
+}
+
+#pointContent .detail .masthead span {
+    display: block;
+    float: left;
+    border-right: 1px solid #e3e3e3;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#pointContent .detail .why {
+  width: 300px;
+}
+
+#pointContent .detail .what {
+  width: 100px;
+  text-align: center;  
+}
+
+#pointContent .detail .when {
+  width: 200px;
+  text-align: center;  
+}
+
+#pointContent .detail .notes {    
+    width: 270px;
+    padding-left: 15px;
+}
+
+#pointContent .detail .masthead span.right {
+    border-right: 0;
+}
+
+#pointContent .detail .item-list li.has-detail {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+#pointContent .detail .item-list li.has-detail >div {
+  float: left;
+}
+
+.has-detail .why > img {
+  float: left;
+  margin: 30px 5px;
+  width: 60px;
+  height: 60px;
+}
+
+.has-detail .why > .metas {
+  width: 230px;
+  float: left;
+  margin: 30px 0;
+}
+
+.has-detail .why > .metas > .source {
+  color: #333333;
+  height: 2em;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.has-detail .why > .metas > .number {
+  color: #888888;
+  display: block;
+  margin-top: 6px;
+}
+
+.has-detail .what span {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 36px 0;
+  display: block;
+}
+
+.has-detail .what span.plus {
+  color: #B1000F;
+}
+
+.has-detail .what span.minus {
+  color: #30992E;
+}
+
+.has-detail .when span.date {
+  margin: 46px 0;
+  display: block;
+}
+
+.has-detail .notes span {
+  text-align: right;
+  display: block;
+  margin: 42px 10px;
+}

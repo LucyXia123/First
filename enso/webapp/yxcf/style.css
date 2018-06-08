@@ -1,0 +1,28 @@
+    .pt {
+      min-width: 360px;
+      width: 360px;
+      padding-right: 20px;
+    }   	
+    .article-metas {
+      min-width: 360px;
+      width: 360px;
+    }
+    .article-body .avatar {
+      margin: 0 auto;
+      display: block;
+      box-sizing: border-box;      
+      padding: 0px;
+      border: 0px;
+      outline: 0px;
+      vertical-align: baseline;
+      background: transparent;
+      max-width: 100%;
+      height: auto !important;
+    }
+    .article-body article p {           
+       text-indent: 2em;
+    }
+.article-header {
+    position: relative;
+    height: 120px;
+}

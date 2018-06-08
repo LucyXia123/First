@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsinghuadtv.www.mapper.SchoolMapper">
+
+    <resultMap id="schoolResult" type="School">
+		<id property="id" column="school_id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+		<result property="area" column="school_area" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="title" column="school_title" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="pinyin" column="school_pinyin" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="logo" column="school_logo" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="content" column="school_content" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="avatar" column="school_avatar" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="words" column="school_words" jdbcType="VARCHAR" javaType="java.lang.String"/>
+	</resultMap>
+	
+	<sql id="schoolColumns">
+		schl.id AS school_id,
+		schl.area AS school_area,
+		schl.title AS school_title,
+		schl.pinyin AS school_pinyin,
+		schl.logo AS school_logo,
+		schl.content AS school_content,
+		schl.avatar AS school_avatar,
+		schl.words AS school_words
+	</sql>
+    
+</mapper>

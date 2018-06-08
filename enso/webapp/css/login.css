@@ -1,0 +1,263 @@
+@charset "utf-8";
+select {
+  background-color: #fff;
+  background-position: right center;
+  background-repeat: no-repeat;
+  border: 1px solid #888;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font: 12px/1.5 Tohama,Aria,sans-serif;
+  height: 30px;
+  padding: 0 4px;
+}
+
+body > nav.navbar {
+  background-color: #f5f5f5;
+}
+
+.register, .login {
+    min-height: 400px;
+    height: auto;
+    min-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+}
+
+@media (min-width: 768px) {
+    .register, .login {
+        width: 1000px;
+    }
+}
+
+@media (max-width: 768px) {
+    .register .login {
+        width: 100%;
+    }
+}
+
+.register .panel, .login .panel {
+    border: 1px solid #c9c9c9;
+    margin: 20px auto;    
+}
+
+.register .panel {
+  min-height: 560px;
+}
+
+.register .panel .panel-heading, .login .panel .panel-heading {
+    float: left;
+    padding: 10px 15px;
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+    border-bottom: 2px solid #00b0ea;
+}
+
+.register .panel .panel-heading h1, .login .panel .panel-heading h1 {
+    float: left;
+    width: 200px;
+    font-size: 24px;
+    text-indent: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.register .panel .panel-heading p, .login .panel .panel-heading p {
+    float: right;
+}
+
+.register .panel .panel-body {
+    clear: left;
+}
+
+.login .panel .panel-body {
+    clear: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-sizing: content-box;
+    position: relative;
+}
+
+.register b.require-red, .login b.require-red {
+    padding: 0 .2em;
+}
+
+.register .form-group .select, .login .form-group .select {
+    padding: .2em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: .2em;
+}
+
+.register .form-group > label, .login .form-group > label {
+    color: #666;
+    font-size: 14px;
+    text-align: right;
+    font-weight: 500;
+    padding-right: 0;
+}
+
+.wrap-login-list .password b {
+    background: url('../images/user/psdshow.png') no-repeat;
+    width: 26px;
+    height: 26px;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    right: 18px;
+    top: 4px;
+    cursor: pointer;
+    background-position: center top;
+}
+
+.wrap-login-list .password b.m1 {
+    background: url('../images/user/psdhide.png') no-repeat;
+}
+
+.psd-Strength {
+    width: 100%;
+    height: 48px;
+    padding: 0;
+    border: 0;
+    float: left;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: -10px;
+}
+
+.psd-Strength span {
+    background: #9c9c9c;
+    width: 33%;
+    height: 10px;
+    display: block;
+    float: left;
+    margin-top: 8px;
+    margin-left: 1px;
+}
+
+.psd-Strength span:first-child {
+    margin-left: 0;
+}
+
+.psd-Strength span.security {
+    background: #97f32b;
+    color: #333;
+}
+
+.psd-Strength span.commonly {
+    background: #ffcc1a;
+}
+
+.psd-Strength span.danger {
+    background: #FF5D5D;
+}
+
+.psd-Strength label {
+    float: left;
+    line-height: 14px;
+    color: #999;
+    width: 33%;
+    text-align: center;
+    margin-top: .2em;
+    font-weight: normal;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.captcha {
+    cursor:pointer;
+    height:40px;
+    width: 136px;
+}
+
+.mbl {
+    margin-bottom: 20px !important;
+}
+
+.social-login {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    width: 33%;
+    margin: 30px auto;
+}
+
+.social-login .line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #f1f1f1;
+    margin-top: -1px;
+    z-index: -1;
+}
+
+.remember {
+    text-indent: .2em;
+    display: inline-block;
+}
+
+.Prompt {
+    min-height: 20px;
+    color: red;
+    display: none;
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.Prompt > img {
+    margin: -2px 2px 0 0;
+    vertical-align: middle;
+}
+
+.help-block {
+    margin: 8px 0 0 0;
+}
+
+@media (min-width: 960px) {
+    .help-block {
+        text-indent: -1.2em;
+    }
+}
+
+.modal-body img.exclaim {
+	vertical-align: middle;
+    margin: -2px 5px 0 0;
+}
+
+.modal-body .done:before {
+    content: '';
+    position: absolute;
+    border-color: #009933;
+    border-style: solid;
+    border-width: 0 0.3em 0.25em 0;
+    height: 1em;
+    top: 2.3em;
+    left: 0.6em;
+    margin-top: -1em;
+    transform: rotate(45deg);
+    width: 0.5em;
+}
+
+.modal-body .done > span {
+	text-indent: 1em;
+    display: inline-block;
+}
+
+#status-wrapper {
+  margin-top: 8px;
+}
+
+#status-wrapper input[type=radio] {
+  width: 14px;
+  height: 14px;
+}
+
+#status-wrapper input[type=radio] + span {
+    margin-right: 40px;
+    font-size: 14px;
+}

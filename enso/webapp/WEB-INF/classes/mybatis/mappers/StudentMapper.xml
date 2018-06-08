@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tsinghuadtv.www.mapper.StudentMapper">
+
+    <resultMap id="studentResult" type="Student">
+		<id property="usernumber" column="student_user_number" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="username" column="student_user_name" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="pwd" column="student_password" jdbcType="CHAR" javaType="java.lang.String"/>
+		<result property="mobile" column="student_telephone" jdbcType="CHAR" javaType="java.lang.String"/>
+		<result property="email" column="student_email" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="school" column="student_school" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="area" column="student_area" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="grade" column="student_grade" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="classname" column="student_class" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="realname" column="student_real_name" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="idnum" column="student_id_card_no" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="salt" column="student_salt" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="version" column="student_version" jdbcType="VARCHAR" javaType="java.lang.String"/>
+		<result property="createTime" column="student_create_date" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+		<result property="type" column="student_type" jdbcType="VARCHAR" javaType="java.lang.String"/>
+	</resultMap>
+	
+	<sql id="studentColumns">
+		stu.USERNUMBER AS student_user_number,
+		stu.USERNAME AS student_user_name,
+		stu.PASSWORD AS student_password,
+		stu.TELEPHONE AS student_telephone,
+		stu.EMAIL AS student_email,
+		stu.SCHOOL AS student_school,
+		stu.area AS student_area,
+		stu.GRADE AS student_grade,
+		stu.CLASS AS student_class,
+		stu.REALNAME AS student_real_name,
+		stu.IDCRADNO AS student_id_card_no,
+		stu.SALT AS student_salt,
+		stu.VERSION AS student_version,
+		stu.CREATEDATE AS student_create_date,
+		stu.type AS student_type
+	</sql>
+    
+</mapper>

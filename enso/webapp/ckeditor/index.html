@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>A Simple Page with CKEditor</title>
+    <!-- Make sure the path to CKEditor is correct. -->
+    <script src="./ckeditor.js"></script>
+</head>
+<p>Reference</p>
+<ul>
+    <li><a href="https://ckeditor.com/ckeditor-4/#document" target="_blank">Introduction</a></li>
+    <li><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_installation" target="_blank">Documentation</a></li>
+</ul>
+
+<body>
+    <textarea name="editor1" id="editor1" rows="10" cols="80">
+        This is my textarea to be replaced with CKEditor.
+    </textarea>
+    <button id="btn">点击取得html</button>
+    <script>
+    // Replace the <textarea id="editor1"> with a CKEditor
+    // instance, using default configuration.
+    CKEDITOR.replace('editor1');
+
+    document.getElementById("btn").addEventListener("click", function() {
+        // 这里的editor1 与第20行的相同
+        var html = CKEDITOR.instances.editor1.getData();
+        alert(html);
+    });
+    </script>
+</body>
+</form>
+
+</html>

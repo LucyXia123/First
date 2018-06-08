@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+   font-size: 62.5%;
+    /*14px*/
+
+}
+.now {
+	color:blue;
+}
+nav{
+    width: 1200px;
+    height: 70px;
+    
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+}
+.tw_top {
+    width: 90%;
+    height: 50px;
+    background-color: rgba(0,0,0,0.05);
+    margin: 10px auto;
+    line-height: 50px;
+
+}
+.tw_top span {
+    font-size: 1.5rem;
+    margin-right: -6px;
+    margin-left: 20px;
+}
+.tw_mid_content {
+    width: 100%;
+   /*  height: 800px; */
+    /*background-color: pink;*/
+     margin: 0 auto;
+     position: relative;
+    
+}
+.tw_mid_content dl {
+    height: 50px;
+    width: auto;
+    text-align: center;
+    padding-top: 20px;
+    
+
+}
+.tw_mid_content dl dt {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+.tw_mid_content dl dd {
+    /*float: left;*/
+      display: inline;
+      margin : 0 0 0 30px;
+      font-size: 1.5rem;
+
+}
+.tw_mid {
+    width: 40%;
+    height:80px;
+    background-color: rebeccapurple;
+    margin: 25px auto;
+}
+.tw_image {
+    width: 529px;
+    height:316px;
+    background-color: goldenrod;
+    margin: 0px auto;
+}
+.tw_digest {
+    width: 448px;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+.tw_box {
+    width: 864px;
+    height: 300px;
+    background-color: green;
+    margin: 20px auto;
+    position: relative;
+}
+/*宸︾偣璧�*/
+.tw_function {
+     margin: 0 auto;
+     width: 864px;
+     height: 80px;
+     display: block;
+     /*background-color: #2e6da4;*/
+     position: relative;
+     font-size: 2rem;
+     line-height: 80px;
+ }
+.tw_dz img {
+    width: 44px;
+    height: 44px;
+    display: block;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.tw_dz > #dzs {
+    float: left;
+    margin-left: 20px;
+    font-size: 2.5rem;
+}
+.tw_sc  {
+    position: absolute;
+    top:-2px;
+    right: 150px;
+    display: inline-block;
+}
+#sc_image  {
+    border-width: 0px;
+    position: absolute;
+    left: -38px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+}
+.tw_sc  span {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 2.5rem;
+}
+.wx_image {
+    border-width: 0px;
+    position: absolute;
+    right: 55px;
+    top: 18px;
+    width: 60px;
+    height: 60px;
+}
+/*璇勮鏁�*/
+#tw_pls >p >span{
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    width: 100%;
+    height:80px;
+    white-space: nowrap;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #5e5e5e;
+    display:block;
+}
+.input-group  {
+    border-width: 0px;
+    position: absolute;
+    left:295px;
+    top: 78px;
+    width: 900px;
+    height: 80px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #8D8D8D;
+    text-align: left;
+    /*background-color: #00a4ff;*/
+}
+.input-group .form-control {
+    height: 60px;
+}
+.input-group >span >button {
+    height: 60px;
+    margin-top: -20px;
+}
+/*璇勮鍖�*/
+#tw_plq {
+    width: 900px;
+    height: 641px;
+    border: 1px solid grey;
+    margin: 60px auto 0 auto;
+
+}
+#tw_plq  .tw_plq_inner {
+    width: 800px;
+    height: 639px;
+    /*border: 1px solid grey;*/
+    margin: 0 auto;
+    position: relative;
+
+}
+.tw_plq_record {
+    width: 100%;
+    height: 120px;
+    border-bottom: 1px solid grey ;
+    border-bottom-height: 800px;
+    position: relative;
+}
+#tw_plq .img {
+    position: absolute;
+    left: 0px;
+    top: 22px;
+    width: 50px;
+    height: 50px;
+}
+#tw_plq .tw_plq_record span {
+    position: absolute;
+    left: 80px;
+    top: 35px;
+    font-size: 2rem;
+}
+#tw_plq .tw_plq_record p>span {
+    position: absolute;
+    left:170px;
+    top: 35px;
+    font-size: 2rem;
+
+}
+ .tw_plq_record #tw_write {
+    position: absolute;
+    left:80px;
+    top: 80px;
+    font-size: 1.5rem;
+
+}
+#tw_plq  .tw_plq_inner .tw_dot {
+    display: block;
+    position: absolute;
+    bottom: 65px;
+    left: 43%;
+    font-size: 3rem;
+}
+#tw_loadMore {
+    position: absolute;
+    bottom: 40px;
+    left: 40%;
+    font-size: 2rem;
+
+}
